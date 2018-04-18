@@ -1,0 +1,10 @@
+= IsoDoc HTML Styling
+
+This iso-rice.html is purely generated from the 
+https://github.com/riboseinc/isodoc-rice document.
+
+The goal here is to create a good stylesheet to bring back to 
+https://github.com/riboseinc/asciidoctor-iso .
+
+TODO: add a French and Chinese verson for styling too.
+
