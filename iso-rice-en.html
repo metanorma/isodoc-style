@@ -2,575 +2,97 @@
 <!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns:epub="http://www.idpf.org/2007/ops">
   <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>iso-rice-en</title><style>
-  <!--
-p.MsoCommentText, li.MsoCommentText, div.MsoCommentText {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 12.0pt;
-  margin-left: 0cm;
-  text-align: justify;
-  line-height: 12.0pt;
-  tab-stops: 20.15pt;
-  font-size: 12.0pt;
-  font-family: "Cambria", serif; }
-
-p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 12.0pt;
-  margin-left: 0cm;
-  text-align: justify;
-  line-height: 12.0pt;
-  tab-stops: 20.15pt;
-  font-size: 10.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
--->
-</style>
-    <style>
-      <!--
-p.Sourcecode, li.Sourcecode, div.Sourcecode, pre.Sourcecode {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 12.0pt;
-  margin-left: 0cm;
-  text-align: left;
-  line-height: 12.0pt;
-  tab-stops: 20.15pt;
-  font-size: 9.0pt;
-  font-family: "Courier New", monospace; }
-
-p.Biblio, li.Biblio, div.Biblio {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 12.0pt;
-  margin-left: 33.15pt;
-  text-indent: -33.15pt;
-  tab-stops: 33.15pt;
-  line-height: 12.0pt;
-  font-size: 11.0pt;
-  font-family: "Cambria", serif; }
-
-p.FigureTitle {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 6.0pt;
-  margin-left: 0cm;
-  text-align: center;
-  line-height: 12.0pt;
-  page-break-before: avoid;
-  tab-stops: 20.15pt;
-  font-size: 11.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
-p.TableTitle {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 6.0pt;
-  margin-left: 0cm;
-  text-align: center;
-  page-break-after: avoid;
-  line-height: 12.0pt;
-  tab-stops: 20.15pt;
-  font-size: 11.0pt;
-  font-weight: bold;
-  font-family: "Cambria", serif; }
-
-p.Note, div.Note, li.Note, p.TableFootnote, div.TableFootnote, li.TableFootnote {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 12.0pt;
-  margin-left: 0cm;
-  text-align: justify;
-  line-height: 12.0pt;
-  tab-stops: 20.15pt;
-  font-size: 10.0pt;
-  font-family: "Cambria", serif; }
-
-/* may need to be revised */
-p.ANNEX, li.ANNEX, div.ANNEX {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 24.0pt;
-  margin-left: 0cm;
-  text-align: center;
-  text-indent: 0cm;
-  line-height: 15.5pt;
-  page-break-before: always;
-  page-break-after: avoid;
-  tab-stops: 20.15pt;
-  font-size: 14.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
-p.BiblioTitle, li.BiblioTitle, div.BiblioTitle {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 15.5pt;
-  margin-left: 0cm;
-  text-align: center;
-  line-height: 15.5pt;
-  tab-stops: 20.15pt;
-  font-size: 14.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
-p.Definition, li.Definition, div.Definition {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 12.0pt;
-  margin-left: 0cm;
-  text-align: justify;
-  line-height: 12.0pt;
-  tab-stops: 20.15pt;
-  font-size: 11.0pt;
-  font-family: "Cambria", serif; }
-
-p.ForewordTitle, li.ForewordTitle, div.ForewordTitle {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 15.5pt;
-  margin-left: 0cm;
-  text-align: justify;
-  line-height: 15.5pt;
-  page-break-before: always;
-  page-break-after: avoid;
-  tab-stops: 20.15pt;
-  font-size: 14.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
-p.IntroTitle, li.IntroTitle, div.IntroTitle {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 15.5pt;
-  margin-left: 0cm;
-  text-align: justify;
-  line-height: 15.5pt;
-  page-break-after: avoid;
-  tab-stops: 20.15pt;
-  font-size: 14.0pt;
-  page-break-before: always;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
-p.Terms, li.Terms, div.Terms {
-  margin: 0cm;
-  margin-bottom: .0001pt;
-  line-height: 12.0pt;
-  page-break-after: avoid;
-  tab-stops: 20.15pt;
-  font-size: 11.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
-p.AltTerms, li.AltTerms, div.AltTerms {
-  margin: 0cm;
-  margin-bottom: .0001pt;
-  line-height: 12.0pt;
-  page-break-after: avoid;
-  tab-stops: 20.15pt;
-  font-size: 11.0pt;
-  font-family: "Cambria", serif; }
-
-p.DeprecatedTerms, li.DeprecatedTerms, div.DeprecatedTerms {
-  margin: 0cm;
-  margin-bottom: .0001pt;
-  line-height: 12.0pt;
-  page-break-after: avoid;
-  tab-stops: 20.15pt;
-  font-size: 11.0pt;
-  font-family: "Cambria", serif; }
-
-p.TermNum, li.TermNum, div.TermNum {
-  margin: 0cm;
-  margin-bottom: .0001pt;
-  line-height: 12.0pt;
-  page-break-after: avoid;
-  tab-stops: 20.15pt;
-  font-size: 11.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
-p.zzContents, li.zzContents, div.zzContents {
-  margin-top: 48.0pt;
-  margin-right: 0cm;
-  margin-bottom: 15.5pt;
-  margin-left: 0cm;
-  line-height: 15.5pt;
-  page-break-before: always;
-  page-break-after: avoid;
-  tab-stops: 20.15pt;
-  font-size: 14.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
-p.zzCopyright, li.zzCopyright, div.zzCopyright {
-  margin-top: 0cm;
-  margin-right: 14.2pt;
-  margin-bottom: 12.0pt;
-  margin-left: 14.2pt;
-  text-align: justify;
-  line-height: 12.0pt;
-  tab-stops: 20.15pt 25.7pt 481.15pt;
-  border: none;
-  padding: 0cm;
-  font-size: 11.0pt;
-  font-family: "Cambria", serif; }
-
-p.zzSTDTitle, li.zzSTDTitle, div.zzSTDTitle {
-  margin-top: 20.0pt;
-  margin-right: 0cm;
-  margin-bottom: 38.0pt;
-  margin-left: 0cm;
-  line-height: 17.5pt;
-  tab-stops: 20.15pt;
-  font-size: 16.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
-p.zzSTDTitle1, li.zzSTDTitle1, div.zzSTDTitle1 {
-  margin-top: 0pt;
-  margin-right: 0cm;
-  margin-bottom: 18.0pt;
-  margin-left: 0cm;
-  line-height: 17.5pt;
-  tab-stops: 20.15pt;
-  font-size: 16.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
-p.Quote, li.Quote, div.Quote {
-  margin-top: 0cm;
-  margin-right: 36.0pt;
-  margin-bottom: 0cm;
-  margin-left: 36.0pt;
-  text-align: justify;
-  line-height: 12.0pt;
-  tab-stops: 20.15pt;
-  font-size: 11.0pt;
-  font-family: "Cambria", serif; }
-
-p.QuoteAttribution {
-  text-align: right; }
-
-p.Admonition, li.Admonition, div.Admonition {
-  border: none;
-  padding: 0cm;
-  font-size: 12.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
-p.Code, li.Code, div.Code {
-  margin: 0cm;
-  margin-bottom: .0001pt;
-  line-height: 10.0pt;
-  tab-stops: 20.15pt;
-  font-size: 9.0pt;
-  font-family: "Courier New", monospace; }
-
-p.Formula, li.Formula, div.Formula {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 11.0pt;
-  margin-left: 20.15pt;
-  line-height: 12.0pt;
-  tab-stops: right 487.45pt;
-  font-size: 11.0pt;
-  font-family: "Cambria", serif; }
-
-table.dl {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 11.0pt;
-  margin-left: 20.15pt; }
-
-.h2Annex {
-  margin-top: 3.0pt;
-  margin-right: 0cm;
-  margin-bottom: 12.0pt;
-  margin-left: 0cm;
-  text-indent: 0cm;
-  line-height: 12.5pt;
-  page-break-after: avoid;
-  tab-stops: 27.0pt 35.0pt;
-  font-size: 12.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
-ol {
-  margin-bottom: 0cm; }
-
-ul {
-  margin-bottom: 0cm; }
-
-table.MsoISOTable {
-  border-collapse: collapse;
-  border: solid windowtext 2pt;
-  font-size: 10.0pt;
-  font-family: "Cambria", serif; }
-
-table.MsoISOTable tr {
-  page-break-inside: avoid; }
-
-table.MsoISOTable th {
-  border: solid windowtext 1pt;
-  padding: 0cm 2.85pt 0cm 2.85pt; }
-
-table.MsoISOTable td {
-  border: solid windowtext 1pt;
-  padding: 0cm 2.85pt 0cm 2.85pt; }
-
-table.MsoTableGrid {
-  border: solid windowtext 1.0pt;
-  font-size: 10.0pt;
-  font-family: "Cambria", serif; }
-
-td {
-  page-break-inside: avoid; }
-
-tr {
-  page-break-after: avoid; }
-
-span.stem {
-  font-family: "Cambria Math",serif;
-  font-style: italic; }
-
-div.formula {
-  tab-stops: right 487.45pt; }
-
-body {
-  tab-interval: 36.0pt; }
-
-dt {
-  page-break-inside: avoid;
-  page-break-after: avoid; }
-
-.coverpage_docnumber {
-  text-align: right;
-  font-size: 14.0pt;
-  font-weight: bold; }
-
-.coverpage_techcommittee {
-  text-align: right; }
-
-.coverpage_docstage {
-  text-align: center;
-  font-size: 30.0pt;
-  color: #485094; }
-
-div.doctitle {
-  margin-top: 100.0pt;
-  text-align: left;
-  font-size: 16.0pt; }
-
-div.coverpage_warning {
-  border: solid windowtext 1.0pt #485094;
-  padding: 1.0pt 4.0pt 1.0pt 4.0pt #485094;
-  margin-left: 4.25pt;
-  margin-right: 4.25pt; }
-
-.coverpage_warning {
-  color: #485094;
-  font-size: 10.0pt; }
-
-.coverpage {
-  text-align: center;
-  margin: 2em 0; }
-
-.coverpage-logo {
-  color: #485094; }
-
-.coverpage-tc-name {
-  color: #485094;
-  font-size: 1.2em;
-  line-height: 1.2em;
-  margin: 0.25em 0; }
-
-.coverpage-doc-identity {
-  background-color: #485094;
-  color: white;
-  font-size: 2em;
-  line-height: 2em;
-  margin: 0.5em 0; }
-
-.coverpage-title {
-  font-weight: 400; }
-
-.coverpage-title .title-second {
-  display: none; }
-
-.coverpage-stage-block {
-  font-style: italic;
-  font-size: 1.25em;
-  font-weight: 600; }
-
-.coverpage-warning {
-  border-top: solid 1px #f36f36;
-  border-bottom: solid 1px #f36f36;
-  margin: 1em 2em;
-  color: #485094;
-  padding: 1em; }
-
-.coverpage-warning .title {
-  color: #f36f36;
-  font-weight: 500; }
-
-.coverpage-warning .content {
-  font-style: italic; }
-
-.copyright {
-  padding: 1em; }
-
-.copyright .name {
-  color: #485094;
-  font-weight: 600; }
-
-.copyright .address {
-  color: #485094; }
-
-div.rule {
-  width: 100%;
-  height: 1px;
-  background-color: #485094;
-  margin: 2em 0; }
-
-#toc-list ul {
-  margin-bottom: 0.25em; }
-
-#toc-list li {
-  list-style-type: none; }
-
-.MsoTocTextSpan {
-  color: windowtext;
-  display: none;
-  text-decoration: none;
-  text-underline: none; }
-
-a.TableFootnoteRef {
-  vertical-align: super; }
-
-aside {
-  font-size: 10.0pt; }
-
-/*
-div.example {
-	border:solid black .25pt;
-
-	padding:10pt;
-
-	margin:10pt;
-
-}
-*/
-div.example {
-  margin-left: 70.9pt;
-  text-indent: -70.9pt; }
-
-p.example, li.example, div.example, td.example, td.example p {
-  margin: 0in;
-  margin-bottom: .0001pt;
-  font-size: 10.0pt;
-  font-family: "Cambria", serif; }
-
-span.note_label, span.example_label, td.example_label, td.note_label {
-  font-size: 10.0pt;
-  font-family: "Cambria", serif; }
-
--->
-    </style>
+    <title>iso-rice-en</title>
+    <link rel=stylesheet href="style.css">
   </head>
-  <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US">
-    <div class="WordSection1">
 
-<p class="coverpage_docnumber">ISO CD 17301-1:2016(E) </p>
+<body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US">
+  <div class="WordSection1">
 
-<p class="coverpage_techcommittee">ISO&#xA0;TC 34/SC 4/WG 3</p>
+    <p class="coverpage_docnumber">ISO CD 17301-1:2016(E) </p>
 
-<p class="coverpage_techcommittee"><a name="CVP_Secretariat_Loca" id="CVP_Secretariat_Loca">Secretariat</a>: XXXX</p>
+    <p class="coverpage_techcommittee">ISO&#xA0;TC 34/SC 4/WG 3</p>
 
-<p class="doctitle"><b>Cereals and pulses&nbsp;&mdash; Specifications and test methods&nbsp;&mdash; Part&nbsp;1: Rice</b><br />C&#xe9;r&#xe9;ales et l&#xe9;gumineuses&nbsp;&mdash; Sp&#xe9;cification et m&#xe9;thodes d&#x27;essai&nbsp;&mdash; Partie&nbsp;1: Riz</p>
+    <p class="coverpage_techcommittee"><a name="CVP_Secretariat_Loca" id="CVP_Secretariat_Loca">Secretariat</a>: XXXX</p>
 
-<div class="coverpage_docstage"><p>CD stage</p></div>
-
-<div class="coverpage_warning">
-
-<p>Warning for WDs
-and CDs</p><p></p>
-
-<p>This
-document is not an ISO International Standard. It is distributed for review and
-comment. It is subject to change without notice and may not be referred to as
-an International Standard.</p>
-
-<p>Recipients
-of this draft are invited to submit, with their comments, notification of any
-relevant patent rights of which they are aware and to provide supporting
-documentation.</p>
-
-</div>
-
-<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB"><p>&#xA0;</p></span></p>
-
-
-
-
-      <p>&#xA0;</p>
+    <div class="doctitle-en">
+      
+      <span class="title">Cereals and pulses</span> 
+      
+      <span class="subtitle">Specifications and test methods</span>
+      
+      <span class="part">Part&nbsp;1: Rice</span>
+    
     </div>
-    <br />
-    <div class="WordSection2">
+    
+    <div class="doctitle-fr">
+        <span class="title">C&#xe9;r&#xe9;ales et l&#xe9;gumineuses</span>
+      
+        <span class="subtitle">Sp&#xe9;cification et m&#xe9;thodes d&#x27;essai</span>
+      
+        <span class="part">Partie&nbsp;1: Riz</span>
+  
+    </div>
 
-<div class="copyright">
-  <p class="year">
-    &#xA9; ISO 2016, Published in Switzerland
-  </p>
+    <div class="coverpage_docstage"><p>CD stage</p></div>
 
-  <p class="message">
-    All rights
-reserved. Unless otherwise specified, no part of this publication may be
-reproduced or utilized otherwise in any form or by any means, electronic or
-mechanical, including photocopying, or posting on the internet or an intranet,
-without prior written permission. Permission can be requested from either ISO
-at the address below or ISO&#x2019;s member body in the country of the requester.
-  </p>
+    <div class="coverpage_warning">
 
-  <p class="name">ISO copyright office</p>
-  <p class="address">
-    Ch. de Blandonnet 8 &#x2022; CP 401<br />
-    CH-1214 Vernier, Geneva, Switzerland<br />
-    Tel.&#xA0;&#xA0;+ 41 22 749 01 11<br />
-    Fax&#xA0;&#xA0;+ 41 22 749 09 47&gt;<br />
-    copyright@iso.org<br />
-    www.iso.org
-  </p>
+      <p>Warning for WDs
+      and CDs</p>
+
+      <p>This
+      document is not an ISO International Standard. It is distributed for review and comment. It is subject to change without notice and may not be referred to as an International Standard.</p>
+
+      <p>Recipients of this draft are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.</p>
+
+    </div>
+
+
+  </div>
+
+  <div class="WordSection2">
+
+    <div class="copyright">
+      <span class="year">
+        &#xA9; ISO 2016, Published in Switzerland
+      </span>
+
+      <span class="message">
+        All rights reserved. Unless otherwise specified, no part of this publication may be reproduced or utilized otherwise in any form or by any means, electronic or mechanical, including photocopying, or posting on the internet or an intranet without prior written permission. Permission can be requested from either ISO at the address below or ISO&#x2019;s member body in the country of the requester.
+      </span>
+
+      <span class="name">ISO copyright office</span>
+      <span class="address">
+        Ch. de Blandonnet 8 &#x2022; CP 401<br />
+        CH-1214 Vernier, Geneva, Switzerland<br />
+        Tel.&#xA0;&#xA0;+ 41 22 749 01 11<br />
+        Fax&#xA0;&#xA0;+ 41 22 749 09 47&gt;<br />
+        copyright@iso.org<br />
+        www.iso.org
+      </span>
+    </div>
 </div>
 
+<nav>
+  <div class="rule"></div>
+  <div class="toc">
+    <h1 class="toc-contents">Contents</h1>
+    <ul><li><a href="#07a10185-b0d8-4674-b0ed-6062419db5d3">Foreword</a></li><li><a href="#9333cd3f-7198-45e3-afb9-7989f03d4468">Introduction</a></li><li><a href="#482368ee-7b51-4000-ba05-94c56bdac54c">1.&#xA0; Scope</a></li><li><a href="#6c047daf-5c7e-4cb5-88c3-1039d25604a0">2.&#xA0; Normative References</a></li><li><a href="#9fdaab85-119f-4c79-a097-490746d0180e">3.&#xA0; Terms and Definitions</a></li><li><a href="#d8d5278f-a530-49b1-882f-78a9cd785aea">4.&#xA0; Specifications</a></li><ul><li><a href="#098ffa93-0754-48d2-8701-8451151a7fb9">4.1. General, organoleptic and health characteristics</a></li><li><a href="#520bc064-7763-4f47-a67e-3cf96761aede">4.2. Physical and chemical characteristics</a></li></ul><li><a href="#18535537-b916-4470-b372-428133574159">5.&#xA0; Sampling</a></li><li><a href="#b6f98066-feb9-4d9f-ae2c-4d6c27596183">6.&#xA0; Test methods</a></li><ul><li><a href="#30fc11ba-f085-4e09-b753-1379056052f6">6.1. Moisture content</a></li><li><a href="#fabaccdc-7a9c-463c-a1ad-3b6f509efe00">6.2. Waxy rice content</a></li><li><a href="#441983e4-ba53-4de3-98b7-1ea552b86750">6.3. Nitrogen content and crude protein content</a></li><li><a href="#dc94bca7-6381-44e0-9785-3b77f22fac60">6.4. Gelatinization time</a></li><li><a href="#ac70788f-b854-4fdf-b079-1b7ecdce825a">6.5. Husked rice yield</a></li></ul><li><a href="#3598068b-bd9e-4aac-8b28-ba7aa4257492">7.&#xA0; Test report</a></li><li><a href="#a3bd914d-6c10-4298-811d-43acf1e54be9">8.&#xA0; Packaging</a></li><li><a href="#3393070c-4107-41a8-8a14-d11c0dca598d">9.&#xA0; Marking</a></li><li><a href="#1737ea09-78e8-40d7-9d6e-213b7d46789b"><b>Annex A</b> (normative)  <b>Determination of defects</b></a></li><ul><li><a href="#8e408d69-efc8-49a3-bef6-47adf7b3dd60">A.1. Principle</a></li><li><a href="#637210a9-620a-4b7a-a699-ed517fb13195">A.2. Apparatus</a></li><li><a href="#1f7bbdb7-e262-4e08-8ece-376901d8c4bb">A.3. Sampling</a></li><li><a href="#d83b5731-ca31-4852-92fc-6bbd1d61cf2a">A.4. Procedure</a></li><li><a href="#d94f4616-0ba0-45e0-8cca-636fff5b43d8">A.5. Determination</a></li><li><a href="#8a779aa8-f12d-4b1f-ac0e-ebd3ac092160">A.6. Calculation</a></li><li><a href="#e8e70304-ed99-41ac-abd9-2d5bfbf70737">A.7. Test report</a></li></ul><li><a href="#d818dbab-022a-404c-bc14-5ea93525adcf"><b>Annex B</b> (informative)  <b>Determination of the waxy rice content of parboiled rice</b></a></li><ul><li><a href="#b2ba1fd5-c0b0-4333-8d29-fc350b74f88e">B.1. Principle</a></li><li><a href="#285fb5d3-aac2-4e12-873a-187f6cd175a3">B.2. Apparatus</a></li><li><a href="#99f2e1b7-1dfe-4ca0-8b29-3a42a9f1aa3e">B.3. Reagents</a></li><li><a href="#967afc2e-88ff-464c-beb4-843010306475">B.4. Sampling</a></li><li><a href="#c21e5a10-bfaa-4207-ad03-36cbdcdd1711">B.5. Determination</a></li><li><a href="#140bcfc0-2e9c-4d91-8521-d77c2919e5cb">B.6. Calculation</a></li><li><a href="#c195f2d1-9e62-4ff5-807f-db3d386ee345">B.7. Test report</a></li></ul><li><a href="#66e57cd1-4044-43eb-9b48-b8e51960b23c"><b>Annex C</b> (informative)  <b>Gelatinization</b></a></li><li><a href="#8da37082-4658-4ddf-bad2-1f37a744070b"><b>Annex D</b> (informative)  <b>Results of interlaboratory test for husked rice yields</b></a></li><li><a href="#f2dcfade-18fb-461a-8e2b-53f524fe7012"><b>Annex E</b> (informative)  <b>Extraneous information</b></a></li><li><a href="#d9708b7c-41df-480d-8262-76c90f802ddd">Bibliography</a></li></ul>
+  </div>
 
+  <div class="rule"></div>
 
+</nav>
 
-<div class="rule"></div>
-
-<div class="toc">
-  <h1 class="toc-contents">Contents</h1>
-  <ul><li><a href="#07a10185-b0d8-4674-b0ed-6062419db5d3">Foreword</a></li><li><a href="#9333cd3f-7198-45e3-afb9-7989f03d4468">Introduction</a></li><li><a href="#482368ee-7b51-4000-ba05-94c56bdac54c">1.&#xA0; Scope</a></li><li><a href="#6c047daf-5c7e-4cb5-88c3-1039d25604a0">2.&#xA0; Normative References</a></li><li><a href="#9fdaab85-119f-4c79-a097-490746d0180e">3.&#xA0; Terms and Definitions</a></li><li><a href="#d8d5278f-a530-49b1-882f-78a9cd785aea">4.&#xA0; Specifications</a></li><ul><li><a href="#098ffa93-0754-48d2-8701-8451151a7fb9">4.1. General, organoleptic and health characteristics</a></li><li><a href="#520bc064-7763-4f47-a67e-3cf96761aede">4.2. Physical and chemical characteristics</a></li></ul><li><a href="#18535537-b916-4470-b372-428133574159">5.&#xA0; Sampling</a></li><li><a href="#b6f98066-feb9-4d9f-ae2c-4d6c27596183">6.&#xA0; Test methods</a></li><ul><li><a href="#30fc11ba-f085-4e09-b753-1379056052f6">6.1. Moisture content</a></li><li><a href="#fabaccdc-7a9c-463c-a1ad-3b6f509efe00">6.2. Waxy rice content</a></li><li><a href="#441983e4-ba53-4de3-98b7-1ea552b86750">6.3. Nitrogen content and crude protein content</a></li><li><a href="#dc94bca7-6381-44e0-9785-3b77f22fac60">6.4. Gelatinization time</a></li><li><a href="#ac70788f-b854-4fdf-b079-1b7ecdce825a">6.5. Husked rice yield</a></li></ul><li><a href="#3598068b-bd9e-4aac-8b28-ba7aa4257492">7.&#xA0; Test report</a></li><li><a href="#a3bd914d-6c10-4298-811d-43acf1e54be9">8.&#xA0; Packaging</a></li><li><a href="#3393070c-4107-41a8-8a14-d11c0dca598d">9.&#xA0; Marking</a></li><li><a href="#1737ea09-78e8-40d7-9d6e-213b7d46789b"><b>Annex A</b> (normative)  <b>Determination of defects</b></a></li><ul><li><a href="#8e408d69-efc8-49a3-bef6-47adf7b3dd60">A.1. Principle</a></li><li><a href="#637210a9-620a-4b7a-a699-ed517fb13195">A.2. Apparatus</a></li><li><a href="#1f7bbdb7-e262-4e08-8ece-376901d8c4bb">A.3. Sampling</a></li><li><a href="#d83b5731-ca31-4852-92fc-6bbd1d61cf2a">A.4. Procedure</a></li><li><a href="#d94f4616-0ba0-45e0-8cca-636fff5b43d8">A.5. Determination</a></li><li><a href="#8a779aa8-f12d-4b1f-ac0e-ebd3ac092160">A.6. Calculation</a></li><li><a href="#e8e70304-ed99-41ac-abd9-2d5bfbf70737">A.7. Test report</a></li></ul><li><a href="#d818dbab-022a-404c-bc14-5ea93525adcf"><b>Annex B</b> (informative)  <b>Determination of the waxy rice content of parboiled rice</b></a></li><ul><li><a href="#b2ba1fd5-c0b0-4333-8d29-fc350b74f88e">B.1. Principle</a></li><li><a href="#285fb5d3-aac2-4e12-873a-187f6cd175a3">B.2. Apparatus</a></li><li><a href="#99f2e1b7-1dfe-4ca0-8b29-3a42a9f1aa3e">B.3. Reagents</a></li><li><a href="#967afc2e-88ff-464c-beb4-843010306475">B.4. Sampling</a></li><li><a href="#c21e5a10-bfaa-4207-ad03-36cbdcdd1711">B.5. Determination</a></li><li><a href="#140bcfc0-2e9c-4d91-8521-d77c2919e5cb">B.6. Calculation</a></li><li><a href="#c195f2d1-9e62-4ff5-807f-db3d386ee345">B.7. Test report</a></li></ul><li><a href="#66e57cd1-4044-43eb-9b48-b8e51960b23c"><b>Annex C</b> (informative)  <b>Gelatinization</b></a></li><li><a href="#8da37082-4658-4ddf-bad2-1f37a744070b"><b>Annex D</b> (informative)  <b>Results of interlaboratory test for husked rice yields</b></a></li><li><a href="#f2dcfade-18fb-461a-8e2b-53f524fe7012"><b>Annex E</b> (informative)  <b>Extraneous information</b></a></li><li><a href="#d9708b7c-41df-480d-8262-76c90f802ddd">Bibliography</a></li></ul>
-</div>
-
-<div class="rule"></div>
-
-
-
-      <br />
       <div>
         <h1 class="ForewordTitle" id="07a10185-b0d8-4674-b0ed-6062419db5d3">Foreword</h1>
         <span style="MsoCommentReference" target="1" class="commentLink" from="foreword" to="foreword">
-          <span lang="EN-GB" style="font-size:9.0pt" xml:lang="EN-GB">
+          
             <a style="mso-comment-reference:SMC_1;mso-comment-date:20170101T000000"><p id="foreword">ISO (the International Organization for Standardization)
 is a worldwide federation of national standards bodies (ISO member bodies). The work of preparing International Standards is normally carried out through ISO technical committees. Each member body interested in a subject for which a technical committee has been established has the right to be represented on that committee. International organizations, governmental and non-governmental, in liaison with ISO, also take part in the work. ISO collaborates closely with the International Electrotechnical Commission (IEC) on all matters of electrotechnical standardization.</p></a>
             <span style="mso-special-character:comment" target="1"></span>
-          </span>
+
         </span>
         <p id="_1453ee1d-d7f8-4dc5-91ca-1fed8330ccb2">The procedures used to develop this document and those intended for its further maintenance are described in the ISO/IEC Directives, Part 1. In particular the different approval criteria needed for the different types of ISO documents should be noted. This document was drafted in accordance with the editorial rules of the ISO/IEC Directives, Part 2 (see www.iso.org/directives).</p>
         <p id="_e7bbc729-26e2-4d42-9e36-42df9e84071d">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. ISO shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the ISO list of patent declarations received (see www.iso.org/patents).</p>
