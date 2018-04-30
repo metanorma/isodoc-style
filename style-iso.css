@@ -51,15 +51,25 @@ table {
 /* New CSS */
 
 body {
-    margin-left: 8em;
+    margin-left: 298px;
     margin-right: 2em;
 }
 
+main {
+    padding-left: 4em;
+    padding-right: 2em;
+}
+
 .WordSection1, .WordSection2 {
-    padding-left: 2em;
+    padding-left: 4em;
     padding-top: 2em;
-    border-left: 3px solid black;
     width: 512px;
+}
+
+.coverpage_docnumber, .coverpage_techcommittee {
+    text-align: right;
+    font-size: 0.9em;
+    line-height: 0.5em;
 }
 
 .doctitle-en, .doctitle-fr {
@@ -68,24 +78,22 @@ body {
 }
 
 .doctitle-en {
-    background-color: black;
-    padding-left: 2em;
-    margin-left: -2em;
+    padding-left: 3em;
+    margin-left: -3em;
     padding-top: 2em;
     padding-bottom: 2em;
     
 }
 
 .doctitle-en span {
-    font-size: 1.5em;
+    font-size: 2em;
     line-height: 1.5em;
     display: block;
-    color: white;
 }
 
 
 .doctitle-fr span {
-    font-size: 1.2em;
+    font-size: 1.5em;
     line-height: 1.2em;
     font-style: italic;
     display: block;
@@ -104,7 +112,6 @@ span.title {
 
 .coverpage_warning {
     font-size: 0.9em;
-    width: 512px;
     font-style: italic;
     padding-bottom: 1em;
 }
@@ -118,12 +125,6 @@ span.title {
 .copyright .message, .copyright .name, 
 .copyright .address {
     font-size: 0.9em;
-}
-
-nav {
-    margin-left: 2em;
-    width: 512px;
-    padding-top: 2em;
 }
 
 /* TYPOGRAPHY */
@@ -143,6 +144,286 @@ h2 {
 p {
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+a {
+    color: black;
+    text-decoration-color: black;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+h2 p {
+    display: inline;
+}
+
+/* Navigation*/
+
+@media (min-width: 768px) {
+    nav {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 278px;
+        font-size: 0.9em;
+        overflow: auto;
+        padding: 0 0 0 20px;
+        background-color:#f7f7f7; 
+        line-height: 1.2em;
+    }
+
+    #toggle {
+        position: fixed;
+        height: 100%;
+        width: 30px;
+        border-right: solid black 1px;
+        background-color: #f7f7f7;
+        color: black!important;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    #toggle span {
+        text-align: center;
+        width: 100%;
+        position: absolute;             
+        top: 50%;
+        transform: translate(0, -50%);
+        
+    }
+
+
+    .container {
+        padding-left: 360px;
+    }
+
+    .rule.toc {
+        display: none;
+    }
+
+    h1.toc-contents {
+        margin-top: 1em;
+    }
+
+    ul#toc-list {
+        padding:0;
+        margin:0;
+    }
+}
+
+@media (max-width: 768px) {
+    #toc {
+        padding: 0 1.5em 0 1.5em;
+        overflow: visible;
+    }
+
+    #toggle {
+        display: none;
+    }
+
+    body {
+        margin-left: 2em;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    .WordSection1, .WordSection2 {
+        padding-left: 0;
+        padding-top: 0;
+        width: 100%;
+    }
+}
+  
+
+
+#toc ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#toc li {
+    padding: 5px 10px;
+}
+
+#toc a {
+    text-decoration: none;
+    display: block;
+}
+
+#toc a:hover {
+    color: black;
+}
+
+#toc .h2 {
+    padding-left: 30px;
+}
+
+#toc .h3 {
+    padding-left: 50px;
+}
+
+#toc .toc-active a {
+    color: black;
+}
+
+/*#toc .toc-active, #toc li:hover {
+    background: #1d1d1d;
+    box-shadow: inset -5px 0px 10px -5px #1d1d1d!important;
+}*/
+
+#toc .toc-active, #toc li:hover {
+    box-shadow: 0px 1px 0px 0px black!important;
+    color: black;
+}
+
+#toc li:hover a {
+    color: black;
+}
+
+/*
+    Document types + stages
+*/
+
+.document-type-band {
+    left:0;
+    top:180px;
+    height: 100%;
+    position: fixed;
+    display: block;
+    z-index: 99;
+    /*box-shadow: -5px 0px 10px #1d1d1d*/
+
+}
+
+.document-stage-band {
+    left:0;
+    top:0;
+    height: 100%;
+    position: fixed;
+    display: block;
+    z-index: 98;
+    box-shadow: -5px 0px 10px #1d1d1d
+}
+
+.document-type {
+    position: relative;
+    width: 25px;
+}
+
+.document-stage {
+    position: relative;
+    width: 25px;
+}
+
+p.document-type, p.document-stage {
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin:0;
+    margin-left: 6px;
+    writing-mode:tb-rl;
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-o-transform: rotate(180deg);
+	white-space:nowrap;
+	display:block;
+    bottom:0;
+}
+
+p.document-type {
+    font-weight: 400;
+    height: 210px;
+}
+
+#governance-band p.document-type {
+    font-weight: 400;
+    height: 230px!important;
+}
+
+p.document-stage {
+    font-weight: 300;
+    height:160px;
+}
+
+#standard-band {
+    background-color: #0ac442;
+}
+
+#standard {
+    border-bottom: solid 3px #0ac442;
+}
+
+#governance {
+    border-bottom: solid 3px #750697;
+}
+
+#governance-band {
+    background-color: #750697;
+}
+
+#guide {
+    border-bottom: solid 3px #48a0e7;
+}
+
+#guide-band {
+    background-color: #48a0e7;
+}
+
+.coverpage-maturity {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    margin: 0 0 2em 0;
+    text-transform: uppercase;
+    }
+
+#working-draft {
+    border-bottom: solid 3px #fda706;
+}
+
+#working-draft-band {
+    background-color: #fda706;
+}
+
+#committee-draft {
+    border-bottom: solid 3px #fd06fd;
+}
+
+#committee-draft-band {
+    background-color: #fd06fd;
+}
+
+#draft-standard {
+    border-bottom: solid 3px #fdf906;
+}
+
+#draft-standard {
+    border-bottom: solid 3px #fdf906;
+}
+
+#standard {
+    border-bottom: solid 3px #0ac442;
+}
+
+#standard-band {
+    background-color: #0ac442;
+}
+
+#obsolete {
+    border-bottom: solid 3px #7e0d13;
+}
+
+#obsolete-band {
+    background-color: #7e0d13;
 }
 
 
@@ -238,6 +519,7 @@ margin: 1em 0 2em 0;
 margin-left: auto;
 margin-right: auto;
 padding-right: 2em;
+text-align: center;
 }
 
 table, th, td {
