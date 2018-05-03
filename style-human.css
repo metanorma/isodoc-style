@@ -482,7 +482,6 @@ margin-left: 2em;
 .figure, .Sourcecode {
 font-family: 'Space Mono', monospace;
 background-color: #f7f7f7;
-font-size: 0.8em;
 line-height: 1.6em;
 padding: 1.5em;
 margin: 2em 0 1em 0;
@@ -504,6 +503,7 @@ background-color: #fff495;
 color: #47430c;
 padding: 0.5em;
 margin: 2em 0 2em 0;
+text-align: left;
 }
 
 /*
@@ -514,6 +514,7 @@ margin: 2em 0 2em 0;
 background-color: #e1eef1;
 padding: 1.2em;
 margin: 2em 0 1em 0;
+text-align: left;
 }
 
 .example .example-title {
@@ -544,7 +545,7 @@ font-size: 0.95em;
 }
 
 td, th {
-padding: 1em;
+padding: 1em!important;
 }
 
 td.header {
@@ -556,6 +557,10 @@ text-align: center;
 margin-top: 2.5em;
 font-weight: 800;
 font-size: 1.1em;
+}
+
+.TableFootnote {
+    text-align: left!important;
 }
 
 /*
@@ -608,6 +613,9 @@ Keywords
 span.keyword {
 font-weight: 600;
 }
+
+
+
 
 
 /* Old CSS 
