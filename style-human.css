@@ -171,6 +171,15 @@ p {
     line-height: 1.2em;
 }
 
+p.zzSTDTitle1 {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+span.obligation {
+    font-weight: 400;
+}
+
 a {
     color: black;
     text-decoration-color: black;
@@ -302,6 +311,32 @@ nav a {
 #toc li:hover a {
     color: white;
 }
+
+ul {
+    margin-left: 1em; }
+  
+  li {
+    list-style: none;
+  }
+  
+  li:before {
+    content: "—";
+    display: inline-block; width: 1em;
+    margin-left: -1.2em;
+  }
+  
+  li p {
+    display: inline;
+  }
+  
+  li:first-child {
+    margin-top: 1em;
+  }
+
+  #toc li:before {
+    content: " ";
+    display: none;
+  }
 
 /*
     Document types + stages
