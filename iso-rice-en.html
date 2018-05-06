@@ -15,6 +15,16 @@
     <!--TOC script import-->
     <script type="text/javascript"  src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
 
+    <!-- Footnote hover script -->
+
+    <script src="jquery-inline-footnotes.js"></script>
+
+    <script>
+      $(function() {
+        $("[rel=footnote]").inlineFootnote();
+        });
+    </script>
+
     <!--Font awesome import for the link icon-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
@@ -164,7 +174,9 @@ World<br />
         <p id="ISO6646">ISO 6646, <i> Rice&#x2009;&#x2014;&#x2009;Determination of the potential milling yield from paddy and from husked rice</i></p>
         <p id="ISO8351-1">ISO 8351-1: 1994, <i> Packaging&#x2009;&#x2014;&#x2009;Method of specification for sacks&#x2009;&#x2014;&#x2009;Part 1: Paper sacks</i></p>
         <p id="ISO8351-2">ISO 8351-2, <i> Packaging&#x2009;&#x2014;&#x2009;Method of specification for sacks&#x2009;&#x2014;&#x2009;Part 2: Sacks made from thermoplastic flexible film</i></p>
-        <p id="ISO16634">ISO 16634: --<a href="#ftn1" class="footnote-number" id="_footnote1"><sup>1</sup></a>, <i> Cereals, pulses, milled cereal products, oilseeds and animal feeding stuffs&#x2009;&#x2014;&#x2009;Determination of the total nitrogen content by combustion according to the Dumas principle and calculation of the crude protein content</i></p>
+        <p id="ISO16634">ISO 16634: -- <sup id="fnref:1">
+            <a href="#fn:1" rel="footnote">1</a>
+          </sup>, <i> Cereals, pulses, milled cereal products, oilseeds and animal feeding stuffs&#x2009;&#x2014;&#x2009;Determination of the total nitrogen content by combustion according to the Dumas principle and calculation of the crude protein content</i></p>
         <p id="ISO20483">ISO 20483: 2013, <i> Cereals and pulses&#x2009;&#x2014;&#x2009;Determination of the nitrogen content and calculation of the crude protein content&#x2009;&#x2014;&#x2009;Kjeldahl method</i></p>
         <p id="ISO24333">ISO 24333: 2009, <i> Cereals and cereal products&#x2009;&#x2014;&#x2009;Sampling</i></p>
       </div>
@@ -305,7 +317,9 @@ standardization at the following addresses:</p>
         <div id="_general_organoleptic_and_health_characteristics"><h2 id="098ffa93-0754-48d2-8701-8451151a7fb9">4.1. General, organoleptic and health characteristics</h2><p id="_66627a56-2a51-4604-8177-b541caf370c6">Kernels of rice, whether parboiled, husked or milled, and whether whole or broken, shall be sound, clean and free from foreign odours or odour which indicates deterioration.</p>
 <p id="_5d850091-f171-4549-8ab7-f886ca11c379">The levels of additives and pesticide residues and other contaminants shall not exceed the maximum limits permitted in the country of destination.</p>
 <p id="_9506706e-2f6d-4dc5-a085-0e37d60e90d0">The presence of living insects which are visible to the naked eye is not permitted. This should be determined before separating the bulk sample into test samples.</p></div>
-        <div id="_physical_and_chemical_characteristics"><h2 id="520bc064-7763-4f47-a67e-3cf96761aede">4.2. Physical and chemical characteristics</h2><div id="_3fb267ba-46fc-42a4-a832-85f9d44e5651"><p id="_d2e787f9-598a-4c44-a294-02346f9f17ba">The mass fraction of moisture, determined in accordance with <a href="#ISO712">ISO 712</a>, using an oven complying with the requirements of <a href="#IEC61010-2">IEC 61010-2: 1998</a>, shall not be greater than 15 %.<a href="#ftn2"  class="footnote-number" id="_footnote2"><sup>2</sup></a></p>
+        <div id="_physical_and_chemical_characteristics"><h2 id="520bc064-7763-4f47-a67e-3cf96761aede">4.2. Physical and chemical characteristics</h2><div id="_3fb267ba-46fc-42a4-a832-85f9d44e5651"><p id="_d2e787f9-598a-4c44-a294-02346f9f17ba">The mass fraction of moisture, determined in accordance with <a href="#ISO712">ISO 712</a>, using an oven complying with the requirements of <a href="#IEC61010-2">IEC 61010-2: 1998</a>, shall not be greater than 15 %.<sup id="fnref:2">
+            <a href="#fn:2" rel="footnote">2</a>
+          </sup>
 <p id="_dc7a9301-59ad-41e1-ab0e-e4f76b3c8da6">The mass fraction of extraneous matter and defective kernels in husked and milled rice, whether or not parboiled, determined in accordance with <a href="#AnnexA">Annex A</a>, shall not be greater than the values specified in <a href="#table1">Table 1</a>.</p>
 <div id="_dc7c5567-beac-4b0a-86fd-c64a7d28dcf3" class="Note"><p class="Note"><span class="note_label">NOTE</span>&#xA0; Lower mass fractions of moisture are sometimes needed for certain destinations depending on the climate, duration of transport and storage. For further details, see <a href="#ISO6322-1">ISO 6322-1</a>, <a href="#ISO6322-2">ISO 6322-2</a> and <a href="#ISO6322-3">ISO 6322-3</a>.</p></div></div>
 <div id="_2"><p id="_15bf80ea-d37d-49fe-b901-0868e058b0be">The defect tolerance for the categories considered, and determined in accordance with the method given in <a href="#AnnexA">Annex A</a>, shall not exceed the limits given in <a href="#table1">Table 1</a>.</p>
@@ -514,7 +528,9 @@ standardization at the following addresses:</p>
 </div>
 <div id="AnnexB-3-2">
   
-  <p id="_521633f4-d4bd-4451-b4bf-c29b2fc5cb38"><span><b>B.3.2. Iodine stock solution, </b></span>containing a mass fraction of 4,1 % iodine and 6,3 % potassium iodide in deionized water such as Lugols.<a href="#ftn3" class="footnote-number" id="_footnote3"><sup>3</sup></a></p>
+  <p id="_521633f4-d4bd-4451-b4bf-c29b2fc5cb38"><span><b>B.3.2. Iodine stock solution, </b></span>containing a mass fraction of 4,1 % iodine and 6,3 % potassium iodide in deionized water such as Lugols.<sup id="fnref:3">
+      <a href="#fn:3" rel="footnote">3</a>
+    </sup></p>
 </div>
 <div id="AnnexB-3-3"><p id="_af89e5cb-9ce5-439a-ae15-e6742de14918"><span><b>B.3.3. Iodine working solution, </b></span>obtained by diluting the stock solution (<a href="#AnnexB-3-2">B.3.2</a>) two times (by volume) with deionized water (<a href="#AnnexB-3-1">B.3.1</a>).</p>
 <p id="_e62d4778-f01f-476b-96da-ae6a41af4c7d">Prepare fresh daily.</p></div></div>
@@ -720,15 +736,29 @@ standardization at the following addresses:</p>
         <p id="ref15" class="Biblio">[15]&#xA0; <span style="font-variant:small-caps;">Ranghino F.</span> Evaluation of rice resistance to cooking, based on the gelatinization time of kernels. <i>Il Riso</i>. 1966, <b>XV</b> pp 117-127</p>
         <p id="ref16" class="Biblio">[16]&#xA0; <span style="font-variant:small-caps;">Tkachuk R.</span> Nitrogen-to-protein conversion factors for cereals and oilseed meals. <i>Cereal Chem.</i> 1969, <b>46</b> (4) pp 419-423</p>
       </div>
-      <aside id="ftn1" class="footnote">
-  <p><a href="#_footnote1">1) </a>Under preparation. (Stage at the time of publication ISO/DIS 16634)</p>
-</aside>
-      <aside id="ftn2" class="footnote">
-  <p id="_d3878868-0215-4e11-82b5-a48596f877e0"><a href="#_footnote2">2) </a>Formerly denoted as 15 % (m/m).</p>
-</aside>
-      <aside id="ftn3" class="footnote">
-  <p id="_63f1f8a5-f071-4e61-8ea7-20fc43b83b60"><a href="#_footnote3">3) </a>Lugols is an example of a suitable product available commercially. This information is given for the convenience of users of this document and does not constitute an endorsement by ISO of this product.</p>
-</aside>
+
+      <ol class="footnotes-list">
+          <li id="fn:1">
+            <p>
+              Under preparation. (Stage at the time of publication ISO/DIS 16634)</p>
+            
+            <a href="#fnref:1" rev="footnote">↩</a>
+          </li>
+          <li id="fn:2">
+              <p>
+                  Formerly denoted as 15 % (m/m).</p>
+              
+              <a href="#fnref:2" rev="footnote">↩</a>
+            </li>
+            <li id="fn:3">
+                <p>
+                    Lugols is an example of a suitable product available commercially. This information is given for the convenience of users of this document and does not constitute an endorsement by ISO of this product.</p>
+                
+                <a href="#fnref:3" rev="footnote">↩</a>
+              </li>
+      </ol>
+
+      
       <div style="mso-element:comment-list"><div style="mso-element:comment" id="1"><span style="mso-comment-author:&quot;ISO&quot;"></span><p class="MsoCommentText" id="_c31c3949-0ec1-4125-b3eb-63c710d4fe9b"><span style="MsoCommentReference"><span lang="EN-GB" style="font-size:9.0pt" xml:lang="EN-GB"><span style="mso-special-character:comment"></span></span></span>A Foreword shall appear in each document. The generic text is shown here. It does not contain requirements, recommendations or permissions.</p>
 <p class="MsoCommentText" id="_e5b81090-b901-4b55-82c7-d54a5f150fef">For further information on the Foreword, see <b>ISO/IEC Directives, Part 2, 2016, Clause 12.</b></p></div></div>
     </div>
