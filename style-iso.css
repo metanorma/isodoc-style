@@ -229,7 +229,6 @@ p.AltTerms {
         background-color: #f7f7f7;
         color: black!important;
         cursor: pointer;
-        z-index: 100;
     }
 
     #toggle span {
