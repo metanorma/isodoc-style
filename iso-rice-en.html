@@ -2,575 +2,125 @@
 <!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns:epub="http://www.idpf.org/2007/ops">
   <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>iso-rice-en</title><style>
-  <!--
-p.MsoCommentText, li.MsoCommentText, div.MsoCommentText {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 12.0pt;
-  margin-left: 0cm;
-  text-align: justify;
-  line-height: 12.0pt;
-  tab-stops: 20.15pt;
-  font-size: 12.0pt;
-  font-family: "Cambria", serif; }
+    <title>iso-rice-en</title>
+    
+    <!-- "ISO" styling -->
+    <link rel=stylesheet href="style-iso.css">
 
-p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 12.0pt;
-  margin-left: 0cm;
-  text-align: justify;
-  line-height: 12.0pt;
-  tab-stops: 20.15pt;
-  font-size: 10.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
+    <!-- "Human" styling -->
+    <!--link rel=stylesheet href="style-human.css"-->
 
--->
-</style>
-    <style>
-      <!--
-p.Sourcecode, li.Sourcecode, div.Sourcecode, pre.Sourcecode {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 12.0pt;
-  margin-left: 0cm;
-  text-align: left;
-  line-height: 12.0pt;
-  tab-stops: 20.15pt;
-  font-size: 9.0pt;
-  font-family: "Courier New", monospace; }
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-p.Biblio, li.Biblio, div.Biblio {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 12.0pt;
-  margin-left: 33.15pt;
-  text-indent: -33.15pt;
-  tab-stops: 33.15pt;
-  line-height: 12.0pt;
-  font-size: 11.0pt;
-  font-family: "Cambria", serif; }
+    <!--TOC script import-->
+    <script type="text/javascript"  src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
 
-p.FigureTitle {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 6.0pt;
-  margin-left: 0cm;
-  text-align: center;
-  line-height: 12.0pt;
-  page-break-before: avoid;
-  tab-stops: 20.15pt;
-  font-size: 11.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
+    <!-- Footnote hover script -->
 
-p.TableTitle {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 6.0pt;
-  margin-left: 0cm;
-  text-align: center;
-  page-break-after: avoid;
-  line-height: 12.0pt;
-  tab-stops: 20.15pt;
-  font-size: 11.0pt;
-  font-weight: bold;
-  font-family: "Cambria", serif; }
+    <script src="jquery-inline-footnotes.js"></script>
 
-p.Note, div.Note, li.Note, p.TableFootnote, div.TableFootnote, li.TableFootnote {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 12.0pt;
-  margin-left: 0cm;
-  text-align: justify;
-  line-height: 12.0pt;
-  tab-stops: 20.15pt;
-  font-size: 10.0pt;
-  font-family: "Cambria", serif; }
+    <script>
+      $(function() {
+        $("[rel=footnote]").inlineFootnote();
+        });
+    </script>
 
-/* may need to be revised */
-p.ANNEX, li.ANNEX, div.ANNEX {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 24.0pt;
-  margin-left: 0cm;
-  text-align: center;
-  text-indent: 0cm;
-  line-height: 15.5pt;
-  page-break-before: always;
-  page-break-after: avoid;
-  tab-stops: 20.15pt;
-  font-size: 14.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
+    <!--Font awesome import for the link icon-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
 
-p.BiblioTitle, li.BiblioTitle, div.BiblioTitle {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 15.5pt;
-  margin-left: 0cm;
-  text-align: center;
-  line-height: 15.5pt;
-  tab-stops: 20.15pt;
-  font-size: 14.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,900" rel="stylesheet"> 
 
-p.Definition, li.Definition, div.Definition {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 12.0pt;
-  margin-left: 0cm;
-  text-align: justify;
-  line-height: 12.0pt;
-  tab-stops: 20.15pt;
-  font-size: 11.0pt;
-  font-family: "Cambria", serif; }
-
-p.ForewordTitle, li.ForewordTitle, div.ForewordTitle {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 15.5pt;
-  margin-left: 0cm;
-  text-align: justify;
-  line-height: 15.5pt;
-  page-break-before: always;
-  page-break-after: avoid;
-  tab-stops: 20.15pt;
-  font-size: 14.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
-p.IntroTitle, li.IntroTitle, div.IntroTitle {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 15.5pt;
-  margin-left: 0cm;
-  text-align: justify;
-  line-height: 15.5pt;
-  page-break-after: avoid;
-  tab-stops: 20.15pt;
-  font-size: 14.0pt;
-  page-break-before: always;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
-p.Terms, li.Terms, div.Terms {
-  margin: 0cm;
-  margin-bottom: .0001pt;
-  line-height: 12.0pt;
-  page-break-after: avoid;
-  tab-stops: 20.15pt;
-  font-size: 11.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
-p.AltTerms, li.AltTerms, div.AltTerms {
-  margin: 0cm;
-  margin-bottom: .0001pt;
-  line-height: 12.0pt;
-  page-break-after: avoid;
-  tab-stops: 20.15pt;
-  font-size: 11.0pt;
-  font-family: "Cambria", serif; }
-
-p.DeprecatedTerms, li.DeprecatedTerms, div.DeprecatedTerms {
-  margin: 0cm;
-  margin-bottom: .0001pt;
-  line-height: 12.0pt;
-  page-break-after: avoid;
-  tab-stops: 20.15pt;
-  font-size: 11.0pt;
-  font-family: "Cambria", serif; }
-
-p.TermNum, li.TermNum, div.TermNum {
-  margin: 0cm;
-  margin-bottom: .0001pt;
-  line-height: 12.0pt;
-  page-break-after: avoid;
-  tab-stops: 20.15pt;
-  font-size: 11.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
-p.zzContents, li.zzContents, div.zzContents {
-  margin-top: 48.0pt;
-  margin-right: 0cm;
-  margin-bottom: 15.5pt;
-  margin-left: 0cm;
-  line-height: 15.5pt;
-  page-break-before: always;
-  page-break-after: avoid;
-  tab-stops: 20.15pt;
-  font-size: 14.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
-p.zzCopyright, li.zzCopyright, div.zzCopyright {
-  margin-top: 0cm;
-  margin-right: 14.2pt;
-  margin-bottom: 12.0pt;
-  margin-left: 14.2pt;
-  text-align: justify;
-  line-height: 12.0pt;
-  tab-stops: 20.15pt 25.7pt 481.15pt;
-  border: none;
-  padding: 0cm;
-  font-size: 11.0pt;
-  font-family: "Cambria", serif; }
-
-p.zzSTDTitle, li.zzSTDTitle, div.zzSTDTitle {
-  margin-top: 20.0pt;
-  margin-right: 0cm;
-  margin-bottom: 38.0pt;
-  margin-left: 0cm;
-  line-height: 17.5pt;
-  tab-stops: 20.15pt;
-  font-size: 16.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
-p.zzSTDTitle1, li.zzSTDTitle1, div.zzSTDTitle1 {
-  margin-top: 0pt;
-  margin-right: 0cm;
-  margin-bottom: 18.0pt;
-  margin-left: 0cm;
-  line-height: 17.5pt;
-  tab-stops: 20.15pt;
-  font-size: 16.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
-p.Quote, li.Quote, div.Quote {
-  margin-top: 0cm;
-  margin-right: 36.0pt;
-  margin-bottom: 0cm;
-  margin-left: 36.0pt;
-  text-align: justify;
-  line-height: 12.0pt;
-  tab-stops: 20.15pt;
-  font-size: 11.0pt;
-  font-family: "Cambria", serif; }
-
-p.QuoteAttribution {
-  text-align: right; }
-
-p.Admonition, li.Admonition, div.Admonition {
-  border: none;
-  padding: 0cm;
-  font-size: 12.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
-p.Code, li.Code, div.Code {
-  margin: 0cm;
-  margin-bottom: .0001pt;
-  line-height: 10.0pt;
-  tab-stops: 20.15pt;
-  font-size: 9.0pt;
-  font-family: "Courier New", monospace; }
-
-p.Formula, li.Formula, div.Formula {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 11.0pt;
-  margin-left: 20.15pt;
-  line-height: 12.0pt;
-  tab-stops: right 487.45pt;
-  font-size: 11.0pt;
-  font-family: "Cambria", serif; }
-
-table.dl {
-  margin-top: 0cm;
-  margin-right: 0cm;
-  margin-bottom: 11.0pt;
-  margin-left: 20.15pt; }
-
-.h2Annex {
-  margin-top: 3.0pt;
-  margin-right: 0cm;
-  margin-bottom: 12.0pt;
-  margin-left: 0cm;
-  text-indent: 0cm;
-  line-height: 12.5pt;
-  page-break-after: avoid;
-  tab-stops: 27.0pt 35.0pt;
-  font-size: 12.0pt;
-  font-family: "Cambria", serif;
-  font-weight: bold; }
-
-ol {
-  margin-bottom: 0cm; }
-
-ul {
-  margin-bottom: 0cm; }
-
-table.MsoISOTable {
-  border-collapse: collapse;
-  border: solid windowtext 2pt;
-  font-size: 10.0pt;
-  font-family: "Cambria", serif; }
-
-table.MsoISOTable tr {
-  page-break-inside: avoid; }
-
-table.MsoISOTable th {
-  border: solid windowtext 1pt;
-  padding: 0cm 2.85pt 0cm 2.85pt; }
-
-table.MsoISOTable td {
-  border: solid windowtext 1pt;
-  padding: 0cm 2.85pt 0cm 2.85pt; }
-
-table.MsoTableGrid {
-  border: solid windowtext 1.0pt;
-  font-size: 10.0pt;
-  font-family: "Cambria", serif; }
-
-td {
-  page-break-inside: avoid; }
-
-tr {
-  page-break-after: avoid; }
-
-span.stem {
-  font-family: "Cambria Math",serif;
-  font-style: italic; }
-
-div.formula {
-  tab-stops: right 487.45pt; }
-
-body {
-  tab-interval: 36.0pt; }
-
-dt {
-  page-break-inside: avoid;
-  page-break-after: avoid; }
-
-.coverpage_docnumber {
-  text-align: right;
-  font-size: 14.0pt;
-  font-weight: bold; }
-
-.coverpage_techcommittee {
-  text-align: right; }
-
-.coverpage_docstage {
-  text-align: center;
-  font-size: 30.0pt;
-  color: #485094; }
-
-div.doctitle {
-  margin-top: 100.0pt;
-  text-align: left;
-  font-size: 16.0pt; }
-
-div.coverpage_warning {
-  border: solid windowtext 1.0pt #485094;
-  padding: 1.0pt 4.0pt 1.0pt 4.0pt #485094;
-  margin-left: 4.25pt;
-  margin-right: 4.25pt; }
-
-.coverpage_warning {
-  color: #485094;
-  font-size: 10.0pt; }
-
-.coverpage {
-  text-align: center;
-  margin: 2em 0; }
-
-.coverpage-logo {
-  color: #485094; }
-
-.coverpage-tc-name {
-  color: #485094;
-  font-size: 1.2em;
-  line-height: 1.2em;
-  margin: 0.25em 0; }
-
-.coverpage-doc-identity {
-  background-color: #485094;
-  color: white;
-  font-size: 2em;
-  line-height: 2em;
-  margin: 0.5em 0; }
-
-.coverpage-title {
-  font-weight: 400; }
-
-.coverpage-title .title-second {
-  display: none; }
-
-.coverpage-stage-block {
-  font-style: italic;
-  font-size: 1.25em;
-  font-weight: 600; }
-
-.coverpage-warning {
-  border-top: solid 1px #f36f36;
-  border-bottom: solid 1px #f36f36;
-  margin: 1em 2em;
-  color: #485094;
-  padding: 1em; }
-
-.coverpage-warning .title {
-  color: #f36f36;
-  font-weight: 500; }
-
-.coverpage-warning .content {
-  font-style: italic; }
-
-.copyright {
-  padding: 1em; }
-
-.copyright .name {
-  color: #485094;
-  font-weight: 600; }
-
-.copyright .address {
-  color: #485094; }
-
-div.rule {
-  width: 100%;
-  height: 1px;
-  background-color: #485094;
-  margin: 2em 0; }
-
-#toc-list ul {
-  margin-bottom: 0.25em; }
-
-#toc-list li {
-  list-style-type: none; }
-
-.MsoTocTextSpan {
-  color: windowtext;
-  display: none;
-  text-decoration: none;
-  text-underline: none; }
-
-a.TableFootnoteRef {
-  vertical-align: super; }
-
-aside {
-  font-size: 10.0pt; }
-
-/*
-div.example {
-	border:solid black .25pt;
-
-	padding:10pt;
-
-	margin:10pt;
-
-}
-*/
-div.example {
-  margin-left: 70.9pt;
-  text-indent: -70.9pt; }
-
-p.example, li.example, div.example, td.example, td.example p {
-  margin: 0in;
-  margin-bottom: .0001pt;
-  font-size: 10.0pt;
-  font-family: "Cambria", serif; }
-
-span.note_label, span.example_label, td.example_label, td.note_label {
-  font-size: 10.0pt;
-  font-family: "Cambria", serif; }
-
--->
-    </style>
   </head>
-  <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US">
-    <div class="WordSection1">
 
-<p class="coverpage_docnumber">ISO CD 17301-1:2016(E) </p>
+<body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US">
 
-<p class="coverpage_techcommittee">ISO&#xA0;TC 34/SC 4/WG 3</p>
+    <div id='toggle'> <span>•</span> </div>
 
-<p class="coverpage_techcommittee"><a name="CVP_Secretariat_Loca" id="CVP_Secretariat_Loca">Secretariat</a>: XXXX</p>
+  <div class="WordSection1">
 
-<p class="doctitle"><b>Cereals and pulses&nbsp;&mdash; Specifications and test methods&nbsp;&mdash; Part&nbsp;1: Rice</b><br />C&#xe9;r&#xe9;ales et l&#xe9;gumineuses&nbsp;&mdash; Sp&#xe9;cification et m&#xe9;thodes d&#x27;essai&nbsp;&mdash; Partie&nbsp;1: Riz</p>
+    <p class="coverpage_docnumber">ISO CD 17301-1:2016(E) </p>
 
-<div class="coverpage_docstage"><p>CD stage</p></div>
+    <p class="coverpage_techcommittee">ISO&#xA0;TC 34/SC 4/WG 3</p>
 
-<div class="coverpage_warning">
+    <p class="coverpage_techcommittee"><a name="CVP_Secretariat_Loca" id="CVP_Secretariat_Loca">Secretariat</a>: XXXX</p>
 
-<p>Warning for WDs
-and CDs</p><p></p>
-
-<p>This
-document is not an ISO International Standard. It is distributed for review and
-comment. It is subject to change without notice and may not be referred to as
-an International Standard.</p>
-
-<p>Recipients
-of this draft are invited to submit, with their comments, notification of any
-relevant patent rights of which they are aware and to provide supporting
-documentation.</p>
-
-</div>
-
-<p class="MsoNormal"><span lang="EN-GB" xml:lang="EN-GB"><p>&#xA0;</p></span></p>
-
-
-
-
-      <p>&#xA0;</p>
+    <div class="doctitle-en">
+      
+      <span class="title">Cereals and pulses</span> 
+      
+      <span class="subtitle">Specifications and test methods</span>
+      
+      <span class="part">Part&nbsp;1: Rice</span>
+    
     </div>
-    <br />
-    <div class="WordSection2">
+    
+    <div class="doctitle-fr">
+        <span class="title">C&#xe9;r&#xe9;ales et l&#xe9;gumineuses</span>
+      
+        <span class="subtitle">Sp&#xe9;cification et m&#xe9;thodes d&#x27;essai</span>
+      
+        <span class="part">Partie&nbsp;1: Riz</span>
+  
+    </div>
 
-<div class="copyright">
-  <p class="year">
-    &#xA9; ISO 2016, Published in Switzerland
-  </p>
+    <div class="coverpage_docstage"><p>CD stage</p></div>
 
-  <p class="message">
-    All rights
-reserved. Unless otherwise specified, no part of this publication may be
-reproduced or utilized otherwise in any form or by any means, electronic or
-mechanical, including photocopying, or posting on the internet or an intranet,
-without prior written permission. Permission can be requested from either ISO
-at the address below or ISO&#x2019;s member body in the country of the requester.
-  </p>
+    <div class="coverpage_warning">
 
-  <p class="name">ISO copyright office</p>
-  <p class="address">
-    Ch. de Blandonnet 8 &#x2022; CP 401<br />
-    CH-1214 Vernier, Geneva, Switzerland<br />
-    Tel.&#xA0;&#xA0;+ 41 22 749 01 11<br />
-    Fax&#xA0;&#xA0;+ 41 22 749 09 47&gt;<br />
-    copyright@iso.org<br />
-    www.iso.org
-  </p>
+      <p>Warning for WDs
+      and CDs</p>
+
+      <p>This
+      document is not an ISO International Standard. It is distributed for review and comment. It is subject to change without notice and may not be referred to as an International Standard.</p>
+
+      <p>Recipients of this draft are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.</p>
+
+    </div>
+
+
+  </div>
+
+  <div class="WordSection2">
+
+    <div class="copyright">
+      <span class="year">
+        &#xA9; ISO 2016, Published in Switzerland
+      </span>
+
+      <span class="message">
+        All rights reserved. Unless otherwise specified, no part of this publication may be reproduced or utilized otherwise in any form or by any means, electronic or mechanical, including photocopying, or posting on the internet or an intranet without prior written permission. Permission can be requested from either ISO at the address below or ISO&#x2019;s member body in the country of the requester.
+      </span>
+
+      <span class="name">ISO copyright office</span>
+      <span class="address">
+        Ch. de Blandonnet 8 &#x2022; CP 401<br />
+        CH-1214 Vernier, Geneva, Switzerland<br />
+        Tel.&#xA0;&#xA0;+ 41 22 749 01 11<br />
+        Fax&#xA0;&#xA0;+ 41 22 749 09 47&gt;<br />
+        copyright@iso.org<br />
+        www.iso.org
+      </span>
+    </div>
 </div>
 
+<nav>
 
+  <h1 id="content">Contents</h1>
+  <div id="toc"></div>
 
+</nav>
 
-<div class="rule"></div>
-
-<div class="toc">
-  <h1 class="toc-contents">Contents</h1>
-  <ul><li><a href="#07a10185-b0d8-4674-b0ed-6062419db5d3">Foreword</a></li><li><a href="#9333cd3f-7198-45e3-afb9-7989f03d4468">Introduction</a></li><li><a href="#482368ee-7b51-4000-ba05-94c56bdac54c">1.&#xA0; Scope</a></li><li><a href="#6c047daf-5c7e-4cb5-88c3-1039d25604a0">2.&#xA0; Normative References</a></li><li><a href="#9fdaab85-119f-4c79-a097-490746d0180e">3.&#xA0; Terms and Definitions</a></li><li><a href="#d8d5278f-a530-49b1-882f-78a9cd785aea">4.&#xA0; Specifications</a></li><ul><li><a href="#098ffa93-0754-48d2-8701-8451151a7fb9">4.1. General, organoleptic and health characteristics</a></li><li><a href="#520bc064-7763-4f47-a67e-3cf96761aede">4.2. Physical and chemical characteristics</a></li></ul><li><a href="#18535537-b916-4470-b372-428133574159">5.&#xA0; Sampling</a></li><li><a href="#b6f98066-feb9-4d9f-ae2c-4d6c27596183">6.&#xA0; Test methods</a></li><ul><li><a href="#30fc11ba-f085-4e09-b753-1379056052f6">6.1. Moisture content</a></li><li><a href="#fabaccdc-7a9c-463c-a1ad-3b6f509efe00">6.2. Waxy rice content</a></li><li><a href="#441983e4-ba53-4de3-98b7-1ea552b86750">6.3. Nitrogen content and crude protein content</a></li><li><a href="#dc94bca7-6381-44e0-9785-3b77f22fac60">6.4. Gelatinization time</a></li><li><a href="#ac70788f-b854-4fdf-b079-1b7ecdce825a">6.5. Husked rice yield</a></li></ul><li><a href="#3598068b-bd9e-4aac-8b28-ba7aa4257492">7.&#xA0; Test report</a></li><li><a href="#a3bd914d-6c10-4298-811d-43acf1e54be9">8.&#xA0; Packaging</a></li><li><a href="#3393070c-4107-41a8-8a14-d11c0dca598d">9.&#xA0; Marking</a></li><li><a href="#1737ea09-78e8-40d7-9d6e-213b7d46789b"><b>Annex A</b> (normative)  <b>Determination of defects</b></a></li><ul><li><a href="#8e408d69-efc8-49a3-bef6-47adf7b3dd60">A.1. Principle</a></li><li><a href="#637210a9-620a-4b7a-a699-ed517fb13195">A.2. Apparatus</a></li><li><a href="#1f7bbdb7-e262-4e08-8ece-376901d8c4bb">A.3. Sampling</a></li><li><a href="#d83b5731-ca31-4852-92fc-6bbd1d61cf2a">A.4. Procedure</a></li><li><a href="#d94f4616-0ba0-45e0-8cca-636fff5b43d8">A.5. Determination</a></li><li><a href="#8a779aa8-f12d-4b1f-ac0e-ebd3ac092160">A.6. Calculation</a></li><li><a href="#e8e70304-ed99-41ac-abd9-2d5bfbf70737">A.7. Test report</a></li></ul><li><a href="#d818dbab-022a-404c-bc14-5ea93525adcf"><b>Annex B</b> (informative)  <b>Determination of the waxy rice content of parboiled rice</b></a></li><ul><li><a href="#b2ba1fd5-c0b0-4333-8d29-fc350b74f88e">B.1. Principle</a></li><li><a href="#285fb5d3-aac2-4e12-873a-187f6cd175a3">B.2. Apparatus</a></li><li><a href="#99f2e1b7-1dfe-4ca0-8b29-3a42a9f1aa3e">B.3. Reagents</a></li><li><a href="#967afc2e-88ff-464c-beb4-843010306475">B.4. Sampling</a></li><li><a href="#c21e5a10-bfaa-4207-ad03-36cbdcdd1711">B.5. Determination</a></li><li><a href="#140bcfc0-2e9c-4d91-8521-d77c2919e5cb">B.6. Calculation</a></li><li><a href="#c195f2d1-9e62-4ff5-807f-db3d386ee345">B.7. Test report</a></li></ul><li><a href="#66e57cd1-4044-43eb-9b48-b8e51960b23c"><b>Annex C</b> (informative)  <b>Gelatinization</b></a></li><li><a href="#8da37082-4658-4ddf-bad2-1f37a744070b"><b>Annex D</b> (informative)  <b>Results of interlaboratory test for husked rice yields</b></a></li><li><a href="#f2dcfade-18fb-461a-8e2b-53f524fe7012"><b>Annex E</b> (informative)  <b>Extraneous information</b></a></li><li><a href="#d9708b7c-41df-480d-8262-76c90f802ddd">Bibliography</a></li></ul>
-</div>
-
-<div class="rule"></div>
-
-
-
-      <br />
+<main>
       <div>
         <h1 class="ForewordTitle" id="07a10185-b0d8-4674-b0ed-6062419db5d3">Foreword</h1>
         <span style="MsoCommentReference" target="1" class="commentLink" from="foreword" to="foreword">
-          <span lang="EN-GB" style="font-size:9.0pt" xml:lang="EN-GB">
+          
             <a style="mso-comment-reference:SMC_1;mso-comment-date:20170101T000000"><p id="foreword">ISO (the International Organization for Standardization)
 is a worldwide federation of national standards bodies (ISO member bodies). The work of preparing International Standards is normally carried out through ISO technical committees. Each member body interested in a subject for which a technical committee has been established has the right to be represented on that committee. International organizations, governmental and non-governmental, in liaison with ISO, also take part in the work. ISO collaborates closely with the International Electrotechnical Commission (IEC) on all matters of electrotechnical standardization.</p></a>
             <span style="mso-special-character:comment" target="1"></span>
-          </span>
+
         </span>
         <p id="_1453ee1d-d7f8-4dc5-91ca-1fed8330ccb2">The procedures used to develop this document and those intended for its further maintenance are described in the ISO/IEC Directives, Part 1. In particular the different approval criteria needed for the different types of ISO documents should be noted. This document was drafted in accordance with the editorial rules of the ISO/IEC Directives, Part 2 (see www.iso.org/directives).</p>
         <p id="_e7bbc729-26e2-4d42-9e36-42df9e84071d">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. ISO shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the ISO list of patent declarations received (see www.iso.org/patents).</p>
@@ -610,6 +160,7 @@ World<br />
     <br />
     <div class="WordSection3">
       <p class="zzSTDTitle1">Cereals and pulses&#xA0;&#x2014; Specifications and test methods&#xA0;&#x2014; Part&#xA0;1: Rice</p>
+
       <div id="_scope">
         <h1 id="482368ee-7b51-4000-ba05-94c56bdac54c">1.&#xA0; Scope</h1>
         <p id="_53709b84-34bd-4ecf-b361-c738006c986a">This document specifies minimum requirements and test methods for rice (<i>Oryza sativa L.</i>).</p>
@@ -623,7 +174,9 @@ World<br />
         <p id="ISO6646">ISO 6646, <i> Rice&#x2009;&#x2014;&#x2009;Determination of the potential milling yield from paddy and from husked rice</i></p>
         <p id="ISO8351-1">ISO 8351-1: 1994, <i> Packaging&#x2009;&#x2014;&#x2009;Method of specification for sacks&#x2009;&#x2014;&#x2009;Part 1: Paper sacks</i></p>
         <p id="ISO8351-2">ISO 8351-2, <i> Packaging&#x2009;&#x2014;&#x2009;Method of specification for sacks&#x2009;&#x2014;&#x2009;Part 2: Sacks made from thermoplastic flexible film</i></p>
-        <p id="ISO16634">ISO 16634: --<a href="#ftn1" epub:type="footnote" id="_footnote1"><sup>1</sup></a>, <i> Cereals, pulses, milled cereal products, oilseeds and animal feeding stuffs&#x2009;&#x2014;&#x2009;Determination of the total nitrogen content by combustion according to the Dumas principle and calculation of the crude protein content</i></p>
+        <p id="ISO16634">ISO 16634: -- <sup id="fnref:1">
+            <a href="#fn:1" rel="footnote">1</a>
+          </sup>, <i> Cereals, pulses, milled cereal products, oilseeds and animal feeding stuffs&#x2009;&#x2014;&#x2009;Determination of the total nitrogen content by combustion according to the Dumas principle and calculation of the crude protein content</i></p>
         <p id="ISO20483">ISO 20483: 2013, <i> Cereals and pulses&#x2009;&#x2014;&#x2009;Determination of the nitrogen content and calculation of the crude protein content&#x2009;&#x2014;&#x2009;Kjeldahl method</i></p>
         <p id="ISO24333">ISO 24333: 2009, <i> Cereals and cereal products&#x2009;&#x2014;&#x2009;Sampling</i></p>
       </div>
@@ -638,53 +191,135 @@ standardization at the following addresses:</p>
 <li> <p>IEC Electropedia: available at
   <a href="http://www.electropedia.org">http://www.electropedia.org</a>
 </p> </li> </ul>
-<h2 class="TermNum" id="paddy">3.1</h2><p class="Terms" style="text-align:left;">paddy</p><p class="AltTerms" style="text-align:left;">paddy rice</p>
+
+<h2 class="TermNum" id="paddy">3.1
+  <p class="Terms" style="text-align:left;">paddy</p>
+</h2>
+  
+  <p class="AltTerms" style="text-align:left;">paddy rice</p>
 <p class="AltTerms" style="text-align:left;">rough rice</p>
 <p id="_b75637b6-1b1e-4550-ae80-f8890f4403b4">rice retaining its husk after threshing</p>
-<p>[SOURCE: <a href="#ISO7301">ISO 7301: 2011</a>]</p><h2 class="TermNum" id="husked_rice">3.2</h2><p class="Terms" style="text-align:left;">husked rice</p>
+<p>[SOURCE: <a href="#ISO7301">ISO 7301: 2011</a>]</p>
+
+<h2 class="TermNum" id="husked_rice">3.2
+  <p class="Terms" style="text-align:left;">husked rice</p>
+</h2>
+
   <p class="DeprecatedTerms" style="text-align:left;">DEPRECATED: cargo rice</p>
 
 <p id="_4a1ba561-ab2f-4abe-b946-5049a8c24401"><i>paddy</i> (<a href="#paddy">3.1</a>) from which the husk only has been removed</p>
-<p>[SOURCE: <a href="#ISO7301">ISO 7301: 2011</a>, modified &mdash; The term "cargo rice" is shown as deprecated, and Note 1 to entry is not included here]</p><h2 class="TermNum" id="_milled_rice">3.3</h2><p class="Terms" style="text-align:left;">milled rice</p>
+<p>[SOURCE: <a href="#ISO7301">ISO 7301: 2011</a>, modified &mdash; The term "cargo rice" is shown as deprecated, and Note 1 to entry is not included here]</p>
+
+<h2 class="TermNum" id="_milled_rice">3.3
+  <p class="Terms" style="text-align:left;">milled rice</p>
+</h2>
+
   <p class="AltTerms" style="text-align:left;">white rice</p>
 
 <p id="_fee37fd5-409b-4822-8191-29bb87c1d129"><i>husked rice</i> (<a href="#husked_rice">3.2</a>) from which almost all of the bran and embryo have been removed by milling</p>
-<p>[SOURCE: <a href="#ISO7301">ISO 7301: 2011</a>]</p><h2 class="TermNum" id="_parboiled_rice">3.4</h2>
+<p>[SOURCE: <a href="#ISO7301">ISO 7301: 2011</a>]</p>
+
+<h2 class="TermNum" id="_parboiled_rice">3.4
   <p class="Terms" style="text-align:left;">parboiled rice</p>
+</h2>
+
   <p id="_cbf119b1-cd6d-4244-8714-59b35cd318ac">rice whose starch has been fully gelatinized by soaking <i>paddy</i> (<a href="#paddy">3.1</a>) rice or <i>husked rice</i> (<a href="#husked_rice">3.2</a>) in water followed by a heat treatment and a drying process</p>
-<h2 class="TermNum" id="_waxy_rice">3.5</h2><p class="Terms" style="text-align:left;">waxy rice</p><p id="_5d44df97-cfb4-45f2-9574-7ee754b84742">variety of rice whose kernels have a white and opaque appearance</p>
-<div class="Note"><p class="Note">Note 1 to entry: The starch of waxy rice consists almost entirely of amylopectin. The kernels have a tendency to stick together after cooking.</p></div><h2 class="TermNum" id="_extraneous_matter">3.6</h2><p class="Terms" style="text-align:left;">extraneous matter</p><p class="AltTerms" style="text-align:left;">EM</p>
+
+<h2 class="TermNum" id="_waxy_rice">3.5
+  <p class="Terms" style="text-align:left;">waxy rice</p>
+</h2>
+
+  <p id="_5d44df97-cfb4-45f2-9574-7ee754b84742">variety of rice whose kernels have a white and opaque appearance</p>
+<div class="Note"><p class="Note">Note 1 to entry: The starch of waxy rice consists almost entirely of amylopectin. The kernels have a tendency to stick together after cooking.</p></div>
+
+<h2 class="TermNum" id="_extraneous_matter">3.6
+  <p class="Terms" style="text-align:left;">extraneous matter</p>
+</h2>
+
+  <p class="AltTerms" style="text-align:left;">EM</p>
 
 <p id="_1e6f54d7-68b1-490e-874c-72f3e080d610">&lt;rice&gt; organic and inorganic components other than whole or broken kernels</p>
 <table id="_25a40ee3-a338-4a57-b58a-4387a56c5443" class="example"><tr><td width="110pt" valign="top" class="example_label" style="width:82.8pt;padding:.75pt .75pt .75pt .75pt">EXAMPLE 1</td><td valign="top">
   <p id="_cb313ff7-e74a-4875-9be3-dffc61905700" class="example">Foreign seeds, husks, bran, sand, dust.</p>
-</td></tr></table><h2 class="TermNum" id="HDK">3.7</h2><p class="Terms" style="text-align:left;">HDK</p>
+</td></tr></table>
+
+<h2 class="TermNum" id="HDK">3.7
+  <p class="Terms" style="text-align:left;">HDK</p>
+</h2>
+
   <p class="AltTerms" style="text-align:left;">heat-damaged kernel</p>
 
 <p id="_bb9601e9-7db1-49ee-b2cb-c60a169c2dd0">kernel, whole or broken, which has changed its normal colour as a result of heating</p>
-<div class="Note"><p class="Note">Note 1 to entry: This category includes whole or broken kernels that are yellow due to alteration. Parboiled rice in a batch of non-parboiled rice is also included in this category.</p></div><h2 class="TermNum" id="_damaged_kernel">3.8</h2>
+<div class="Note"><p class="Note">Note 1 to entry: This category includes whole or broken kernels that are yellow due to alteration. Parboiled rice in a batch of non-parboiled rice is also included in this category.</p></div>
+
+<h2 class="TermNum" id="_damaged_kernel">3.8
   <p class="Terms" style="text-align:left;">damaged kernel</p>
+</h2>
+
   <p id="_6995b198-b30a-48b5-aae4-d21cb0a8b7a0">kernel, whole or broken, showing obvious deterioration due to moisture, pests, disease or other causes, but excluding <i>HDK</i> (<a href="#HDK">3.7</a>)</p>
-<h2 class="TermNum" id="_immature_kernel">3.9</h2><p class="Terms" style="text-align:left;">immature kernel</p>
+
+<h2 class="TermNum" id="_immature_kernel">3.9
+  <p class="Terms" style="text-align:left;">immature kernel</p>
+</h2>
+
   <p class="AltTerms" style="text-align:left;">unripe kernel</p>
 
-<p id="_c57b1480-d843-4b92-9845-ee160f8eec61">kernel, whole or broken, which is unripe and/or underdeveloped</p><h2 class="TermNum" id="_husked_rice_yield">3.10</h2><p class="Terms" style="text-align:left;">husked rice yield</p><p id="_c3e08f16-83ab-45b2-bf1b-f8409035b3a2">amount of husked rice obtained from paddy</p>
-<p>[SOURCE: <a href="#ISO6646">ISO 6646</a>]</p><h2 class="TermNum" id="_nitrogen_content">3.11</h2><p class="Terms" style="text-align:left;">nitrogen content</p><p id="_800b82f7-78f7-4ad0-b2a0-b1396ba17a81">quantity of nitrogen determined after application of the procedure described</p>
+<p id="_c57b1480-d843-4b92-9845-ee160f8eec61">kernel, whole or broken, which is unripe and/or underdeveloped</p>
+
+<h2 class="TermNum" id="_husked_rice_yield">3.10
+  <p class="Terms" style="text-align:left;">husked rice yield</p>
+</h2>
+
+  <p id="_c3e08f16-83ab-45b2-bf1b-f8409035b3a2">amount of husked rice obtained from paddy</p>
+<p>[SOURCE: <a href="#ISO6646">ISO 6646</a>]</p>
+
+<h2 class="TermNum" id="_nitrogen_content">3.11
+  <p class="Terms" style="text-align:left;">nitrogen content</p>
+</h2>
+
+  <p id="_800b82f7-78f7-4ad0-b2a0-b1396ba17a81">quantity of nitrogen determined after application of the procedure described</p>
 <div class="Note"><p class="Note">Note 1 to entry: It is expressed as a mass fraction of dry product, as a percentage.</p></div>
-<p>[SOURCE: <a href="#ISO20483">ISO 20483: 2013</a>]</p><h2 class="TermNum" id="_crude_protein_content">3.12</h2><p class="Terms" style="text-align:left;">crude protein content</p><p id="_f0fba4e1-792f-4481-b556-b5f52845b9b9">quantity of crude protein obtained from the nitrogen content as determined by applying the specified method, calculated by multiplying this content by an appropriate factor depending on the type of cereal or pulse</p>
+<p>[SOURCE: <a href="#ISO20483">ISO 20483: 2013</a>]</p>
+
+<h2 class="TermNum" id="_crude_protein_content">3.12
+  <p class="Terms" style="text-align:left;">crude protein content</p>
+</h2>
+
+  <p id="_f0fba4e1-792f-4481-b556-b5f52845b9b9">quantity of crude protein obtained from the nitrogen content as determined by applying the specified method, calculated by multiplying this content by an appropriate factor depending on the type of cereal or pulse</p>
 <div class="Note"><p class="Note">Note 1 to entry: It is expressed as a mass fraction of dry product, as a percentage.</p></div>
-<p>[SOURCE: <a href="#ISO20483">ISO 20483: 2013</a>]</p><h2 class="TermNum" id="gelatinization">3.13</h2><p class="Terms" style="text-align:left;">gelatinization</p><p id="_1e1d420f-cf2c-4ffc-9764-9409b54b54c6">hydration process conferring the jelly-like state typical of the coagulated colloids, which are named gels, on kernels</p>
+<p>[SOURCE: <a href="#ISO20483">ISO 20483: 2013</a>]</p>
+
+<h2 class="TermNum" id="gelatinization">3.13
+  <p class="Terms" style="text-align:left;">gelatinization</p>
+</h2>
+
+  <p id="_1e1d420f-cf2c-4ffc-9764-9409b54b54c6">hydration process conferring the jelly-like state typical of the coagulated colloids, which are named gels, on kernels</p>
 <div class="Note"><p class="Note">Note 1 to entry: See <a href="#figureC-1">Figure C.1</a>.</p></div>
-<p>[SOURCE: <a href="#ISO14864">ISO 14864: 1998</a>]</p><h2 class="TermNum" id="gel_state">3.14</h2><p class="Terms" style="text-align:left;">gel state</p><p id="_3c63c065-fece-439b-a7f4-5f1ddb0cbbd7">condition reached as a consequence of <i>gelatinization</i> (<a href="#gelatinization">3.13</a>), when the kernel is fully transparent and absolutely free from whitish and opaque granules after being pressed between two glass sheets</p>
-<p>[SOURCE: <a href="#ISO14864">ISO 14864: 1998</a>]</p><h2 class="TermNum" id="_gelatinization_time">3.15</h2><p class="Terms" style="text-align:left;">gelatinization time</p><p class="AltTerms" style="text-align:left;"><span class="stem">(#(t_90)#)</span></p>
-<p id="_28348319-fa36-47d5-b4ee-1d3578839803">time necessary for 90 % of the kernels to pass from their natural state to the <i>gel state</i> (<a href="#gel_state">3.14</a>)</p>
+<p>[SOURCE: <a href="#ISO14864">ISO 14864: 1998</a>]</p>
+
+<h2 class="TermNum" id="gel_state">3.14
+  <p class="Terms" style="text-align:left;">gel state</p>
+</h2>
+
+  <p id="_3c63c065-fece-439b-a7f4-5f1ddb0cbbd7">condition reached as a consequence of <i>gelatinization</i> (<a href="#gelatinization">3.13</a>), when the kernel is fully transparent and absolutely free from whitish and opaque granules after being pressed between two glass sheets</p>
+<p>[SOURCE: <a href="#ISO14864">ISO 14864: 1998</a>]</p>
+
+<h2 class="TermNum" id="_gelatinization_time">3.15
+  <p class="Terms" style="text-align:left;">gelatinization time</p>
+</h2>
+
+  <p class="AltTerms" style="text-align:left;"><span class="stem">(#(t_90)#)</span> time necessary for 90 % of the kernels to pass from their natural state to the <i>gel state</i> (<a href="#gel_state">3.14</a>)</p>
 <p>[SOURCE: <a href="#ISO14864">ISO 14864: 1998</a>]</p></div>
-      <div id="_specifications">
+      
+
+<div id="_specifications">
         <h1 id="d8d5278f-a530-49b1-882f-78a9cd785aea">4.&#xA0; Specifications</h1>
         <div id="_general_organoleptic_and_health_characteristics"><h2 id="098ffa93-0754-48d2-8701-8451151a7fb9">4.1. General, organoleptic and health characteristics</h2><p id="_66627a56-2a51-4604-8177-b541caf370c6">Kernels of rice, whether parboiled, husked or milled, and whether whole or broken, shall be sound, clean and free from foreign odours or odour which indicates deterioration.</p>
 <p id="_5d850091-f171-4549-8ab7-f886ca11c379">The levels of additives and pesticide residues and other contaminants shall not exceed the maximum limits permitted in the country of destination.</p>
 <p id="_9506706e-2f6d-4dc5-a085-0e37d60e90d0">The presence of living insects which are visible to the naked eye is not permitted. This should be determined before separating the bulk sample into test samples.</p></div>
-        <div id="_physical_and_chemical_characteristics"><h2 id="520bc064-7763-4f47-a67e-3cf96761aede">4.2. Physical and chemical characteristics</h2><div id="_3fb267ba-46fc-42a4-a832-85f9d44e5651"><p id="_d2e787f9-598a-4c44-a294-02346f9f17ba">The mass fraction of moisture, determined in accordance with <a href="#ISO712">ISO 712</a>, using an oven complying with the requirements of <a href="#IEC61010-2">IEC 61010-2: 1998</a>, shall not be greater than 15 %.<a href="#ftn2" epub:type="footnote" id="_footnote2"><sup>2</sup></a></p>
+        <div id="_physical_and_chemical_characteristics"><h2 id="520bc064-7763-4f47-a67e-3cf96761aede">4.2. Physical and chemical characteristics</h2><div id="_3fb267ba-46fc-42a4-a832-85f9d44e5651"><p id="_d2e787f9-598a-4c44-a294-02346f9f17ba">The mass fraction of moisture, determined in accordance with <a href="#ISO712">ISO 712</a>, using an oven complying with the requirements of <a href="#IEC61010-2">IEC 61010-2: 1998</a>, shall not be greater than 15 %.<sup id="fnref:2">
+            <a href="#fn:2" rel="footnote">2</a>
+          </sup>
 <p id="_dc7a9301-59ad-41e1-ab0e-e4f76b3c8da6">The mass fraction of extraneous matter and defective kernels in husked and milled rice, whether or not parboiled, determined in accordance with <a href="#AnnexA">Annex A</a>, shall not be greater than the values specified in <a href="#table1">Table 1</a>.</p>
 <div id="_dc7c5567-beac-4b0a-86fd-c64a7d28dcf3" class="Note"><p class="Note"><span class="note_label">NOTE</span>&#xA0; Lower mass fractions of moisture are sometimes needed for certain destinations depending on the climate, duration of transport and storage. For further details, see <a href="#ISO6322-1">ISO 6322-1</a>, <a href="#ISO6322-2">ISO 6322-2</a> and <a href="#ISO6322-3">ISO 6322-3</a>.</p></div></div>
 <div id="_2"><p id="_15bf80ea-d37d-49fe-b901-0868e058b0be">The defect tolerance for the categories considered, and determined in accordance with the method given in <a href="#AnnexA">Annex A</a>, shall not exceed the limits given in <a href="#table1">Table 1</a>.</p>
@@ -729,19 +364,15 @@ standardization at the following addresses:</p>
   <p id="_5bfe4746-4c28-4630-b968-3eddc281851a">The results of an interlaboratory test are given in <a href="#AnnexD">Annex D</a> for information</p>
 </div>
 <div id="_repeatability"><h4>6.5.2.2. Repeatability</h4><p id="_cc91e6ea-afe5-4f3a-bfa0-d64aed3c5fe2">The absolute difference between two independent single test results, obtained using the same method on identical test material in the same laboratory by the same operator using the same equipment within a short interval of time, shall not exceed the arithmetic mean of the values for <span class="stem">(#(r)#)</span> obtained from the interlaboratory study for husked rice in more than 5 % of cases:</p>
-<div id="_2f821b23-acdb-4529-9e45-57ca7d3ba05d" class="formula"><span class="stem">(#(r = 1 %)#)</span>&#xA0; (1)</div><p>where</p><dl><dt>
-    <span class="stem">(#(r)#)</span>
-  </dt><dd>
-    <p id="_9b6bc0c8-123b-41b8-88dd-e68404420e58">is the repeatability limit.</p>
-  </dd></dl>
+<div id="_2f821b23-acdb-4529-9e45-57ca7d3ba05d" class="formula"><span class="stem">(#(r = 1 %)#)</span>&#xA0; (1)</div>
+
+<p>where <span class="stem">(#(r)#)</span> is the repeatability limit.</p>
 
 </div>
 <div id="_reproducibility"><h4>6.5.2.3. Reproducibility</h4><p id="_33692ae2-d95d-402c-8e5f-16fb67b7834c">The absolute difference between two single test results, obtained using the same method on identical test material in different laboratories by different operators using different equipment, shall not exceed the arithmetic mean of the values for <span class="stem">(#(R)#)</span> obtained from the interlaboratory study in more than 5 % of cases:</p>
-<div id="_9539b778-46c2-48cf-ab42-bd898ab8fd86" class="formula"><span class="stem">(#(R = 3 %)#)</span>&#xA0; (2)</div><p>where</p><dl><dt>
-    <span class="stem">(#(R)#)</span>
-  </dt><dd>
-    <p id="_4e858bac-20ff-40ea-a784-2b09ca4181aa">is the reproducibility limit.</p>
-  </dd></dl>
+<div id="_9539b778-46c2-48cf-ab42-bd898ab8fd86" class="formula"><span class="stem">(#(R = 3 %)#)</span>&#xA0; (2)</div>
+
+<p>where <span class="stem">(#(R)#)</span> is the reproducibility limit.</p>
 
 </div></div></div>
       </div>
@@ -786,13 +417,20 @@ standardization at the following addresses:</p>
       </div>
       <br />
       <div id="AnnexA" class="Section3">
-        <h1 class="Annex" id="1737ea09-78e8-40d7-9d6e-213b7d46789b"><b>Annex A</b><br />(normative)<br /><br /><b>Determination of defects</b></h1>
-        <div id="_principle">
+        
+        <h1 class="Annex" id="1737ea09-78e8-40d7-9d6e-213b7d46789b">
+          Annex A <span class="obligation">(normative) </span>Determination of defects</h1>
+       
+       
+          <div id="_principle">
   <h2 id="8e408d69-efc8-49a3-bef6-47adf7b3dd60">A.1. Principle</h2>
   <p id="_167e2d69-254f-4d47-894d-3c98e78465e8">Extraneous matter, broken kernels, damaged kernels and other kinds of rice are separated manually according to the following types: husked rice, milled rice, husked parboiled rice and milled parboiled rice. Each type is then weighed.</p>
 </div>
-        <div id="_apparatus"><h2 id="637210a9-620a-4b7a-a699-ed517fb13195">A.2. Apparatus</h2><p id="_e016dfdc-a8c4-4545-94ad-a9d4628aedbd">The usual laboratory apparatus and, in particular, the following.</p>
-<div id="AnnexA-2-1">
+        <div id="_apparatus">
+          <h2 id="637210a9-620a-4b7a-a699-ed517fb13195">A.2. Apparatus</h2>
+          <p id="_e016dfdc-a8c4-4545-94ad-a9d4628aedbd">The usual laboratory apparatus and, in particular, the following.</p>
+
+          <div id="AnnexA-2-1">
   
   <p id="_336fd726-d7b0-40e7-922f-238918ef8852"><span><b>A.2.1. Sample divider, </b></span>consisting of a conical sample divider or multiple-slot sample divider with a distribution system, e.g. "Split-it-right" sample divider, such as that shown in <a href="#figureA-1">Figure A.1</a>.</p>
 </div>
@@ -833,19 +471,12 @@ standardization at the following addresses:</p>
         <div id="_determination_2"><h2 id="d94f4616-0ba0-45e0-8cca-636fff5b43d8">A.5. Determination</h2><p id="_4a719a1f-1ef8-4885-896e-19241d17e342">Weigh, to the nearest 0,1 g, one of the test samples obtained in accordance with <a href="#AnnexA-4-1">A.4.1</a> and separate the different defects into the bowls (<a href="#AnnexA-2-6">A.2.6</a>). When a kernel has several defects, classify it in the defect category for which the maximum permissible value is the lowest (see <a href="#table1">Table 1</a>).</p>
 <p id="_1e93f04c-fd68-4d0e-8fec-88b4aaa4d6ef">Weigh, to the nearest 0,01 g, the fractions so obtained.</p></div>
         <div id="_calculation"><h2 id="8a779aa8-f12d-4b1f-ac0e-ebd3ac092160">A.6. Calculation</h2><p id="_47be4f2d-29ad-4fca-9536-a73d689c48fe">Express the mass fraction of each defect using <a href="#formulaA-1">Formula (A.1)</a>:</p>
-<div id="formulaA-1" class="formula"><span class="stem">(#(w = (m_D) / (m_s))#)</span>&#xA0; (A.1)</div><p>where</p><dl><dt>
-    <span class="stem">(#(w)#)</span>
-  </dt><dd>
-    <p id="_34d4ed38-389b-4d77-b9b8-788080d24b43">is the mass fraction of grains with a particular defect in the test sample;</p>
-  </dd><dt>
-    <span class="stem">(#(m_D)#)</span>
-  </dt><dd>
-    <p id="_fe76a3d8-49b5-4505-bc45-c8d8195e80a2">is the mass, in grams, of grains with that defect;</p>
-  </dd><dt>
-    <span class="stem">(#(m_S)#)</span>
-  </dt><dd>
-    <p id="_e4a419a1-9da7-4982-b7ba-d891cc103ba3">is the mass, in grams, of the test sample.</p>
-  </dd></dl>
+<div id="formulaA-1" class="formula"><span class="stem">(#(w = (m_D) / (m_s))#)</span>&#xA0; (A.1)</div>
+
+<p>where <span class="stem">(#(w)#)</span> is the mass fraction of grains with a particular defect in the test sample;</p>
+
+    <p><span class="stem">(#(m_D)#)</span> is the mass, in grams, of grains with that defect;</p>
+  <p><span class="stem">(#(m_S)#)</span> is the mass, in grams, of the test sample.</p>
 
 </div>
         <div id="_test_report">
@@ -855,7 +486,9 @@ standardization at the following addresses:</p>
       </div>
       <br />
       <div id="AnnexB" class="Section3">
-        <h1 class="Annex" id="d818dbab-022a-404c-bc14-5ea93525adcf"><b>Annex B</b><br />(informative)<br /><br /><b>Determination of the waxy rice content of parboiled rice</b></h1>
+        <h1 class="Annex" id="d818dbab-022a-404c-bc14-5ea93525adcf">
+          
+          Annex B<span class="obligation"> (informative) </span>Determination of the waxy rice content of parboiled rice</h1>
         <div id="_principle_2">
   <h2 id="b2ba1fd5-c0b0-4333-8d29-fc350b74f88e">B.1. Principle</h2>
   <p id="_efd2a76a-ac2d-45fe-b841-96114736c732">Waxy rice kernels have a reddish brown colour when stained in an iodine solution, while non-waxy rice kernels show a dark blue colour.</p>
@@ -895,7 +528,9 @@ standardization at the following addresses:</p>
 </div>
 <div id="AnnexB-3-2">
   
-  <p id="_521633f4-d4bd-4451-b4bf-c29b2fc5cb38"><span><b>B.3.2. Iodine stock solution, </b></span>containing a mass fraction of 4,1 % iodine and 6,3 % potassium iodide in deionized water such as Lugols.<a href="#ftn3" epub:type="footnote" id="_footnote3"><sup>3</sup></a></p>
+  <p id="_521633f4-d4bd-4451-b4bf-c29b2fc5cb38"><span><b>B.3.2. Iodine stock solution, </b></span>containing a mass fraction of 4,1 % iodine and 6,3 % potassium iodide in deionized water such as Lugols.<sup id="fnref:3">
+      <a href="#fn:3" rel="footnote">3</a>
+    </sup></p>
 </div>
 <div id="AnnexB-3-3"><p id="_af89e5cb-9ce5-439a-ae15-e6742de14918"><span><b>B.3.3. Iodine working solution, </b></span>obtained by diluting the stock solution (<a href="#AnnexB-3-2">B.3.2</a>) two times (by volume) with deionized water (<a href="#AnnexB-3-1">B.3.1</a>).</p>
 <p id="_e62d4778-f01f-476b-96da-ae6a41af4c7d">Prepare fresh daily.</p></div></div>
@@ -924,15 +559,11 @@ standardization at the following addresses:</p>
   <p id="_a0b29552-a2d4-4414-8f93-96ebed036cd8">Weigh the waxy rice portion (<span class="stem">(#(m_1)#)</span>) and the non-waxy rice portion (<span class="stem">(#(m_2)#)</span>) to the nearest 0,1 g.</p>
 </div></div>
         <div id="_calculation_2"><h2 id="140bcfc0-2e9c-4d91-8521-d77c2919e5cb">B.6. Calculation</h2><p id="_94e4df6a-9ca6-46e3-aaca-2ad3bfc6dd81">Calculate the mass fraction, expressed as a percentage, of the waxy rice, <span class="stem">(#(w_(wax))#)</span>, using <a href="#formulaB-1">Formula (B.1)</a>:</p>
-<div id="formulaB-1" class="formula"><span class="stem">(#(w_(wax) = (m_1) / (m_1 + m_2) xx 100)#)</span>&#xA0; (B.1)</div><p>where</p><dl><dt>
-    <span class="stem">(#(m_1)#)</span>
-  </dt><dd>
-    <p id="_7dcb3956-4347-44f1-96df-3dd725ede551">is the mass, expressed in grams, of the waxy rice portion;</p>
-  </dd><dt>
-    <span class="stem">(#(m_2)#)</span>
-  </dt><dd>
-    <p id="_3fe4d25c-2949-4f4a-9b03-7f1497167d0e">is the mass, expressed in grams, of the non-waxy rice portion.</p>
-  </dd></dl>
+<div id="formulaB-1" class="formula"><span class="stem">(#(w_(wax) = (m_1) / (m_1 + m_2) xx 100)#)</span>&#xA0; (B.1)</div>
+
+<p>where <span class="stem">(#(m_1)#)</span> is the mass, expressed in grams, of the waxy rice portion;</p>
+  <p><span class="stem">(#(m_2)#)</span> is the mass, expressed in grams, of the non-waxy rice portion.</p>
+
 
 </div>
         <div id="_test_report_2">
@@ -942,28 +573,30 @@ standardization at the following addresses:</p>
       </div>
       <br />
       <div id="AnnexC" class="Section3">
-        <h1 class="Annex" id="66e57cd1-4044-43eb-9b48-b8e51960b23c"><b>Annex C</b><br />(informative)<br /><br /><b>Gelatinization</b></h1>
+        <h1 class="Annex" id="66e57cd1-4044-43eb-9b48-b8e51960b23c">
+          Annex C<span class="obligation"> (informative) </span>Gelatinization</h1>
         <p id="_845d4b90-c2c7-4c68-86e9-18b96306f9d3"><a href="#figureC-1">Figure C.1</a> gives an example of a typical gelatinization curve. <a href="#figureC-2">Figure C.2</a> shows the three stages of gelatinization.</p>
         <div id="figureC-1" class="figure">
 
   <img src="_images/83e7d61a-69a2-4eee-9717-368188444204.png" width="800" height="697" />
 <aside class="footnote"><div id="ftnd34e6a0c-6a92-4b17-94f1-6cd75a6fa197a">
   
-</div></aside><p><b>Key</b></p><dl><dt>
-    <span class="stem">(#(w)#)</span>
-  </dt><dd>
-    <p id="_99d0fc67-ceea-4cd2-8c21-a11fcb6d129a">mass fraction of gelatinized kernels, expressed in per cent</p>
-  </dd><dt>
-    <span class="stem">(#(t)#)</span>
-  </dt><dd>
-    <p id="_334e46f1-4060-4e31-be63-d074cc123acd">cooking time, expressed in minutes</p>
-  </dd><dt>
-    <span class="stem">(#(t_90)#)</span>
-  </dt><dd>
-    <p id="_d34f29ae-83cf-410d-87b3-c1a4fa15fb35">time required to gelatinize 90 % of the kernels</p>
-  </dd><dt><p>P</p></dt><dd>
-    <p id="_dfa84717-7ff2-4d08-bfb0-06e4b038176d">point of the curve corresponding to a cooking time of <span class="stem">(#(t_90)#)</span></p>
-  </dd><dt><a id="d34e6a0c-6a92-4b17-94f1-6cd75a6fa197a" class="TableFootnoteRef">a&#xA0; </a></dt><dd><p id="_b0f6e2d6-5662-44d0-9f16-6c42badadac1">The time <span class="stem">(#(t_90)#)</span> was estimated to be 18,2 min for this example.</p></dd></dl><div id="_c1751efd-b7b4-4c38-88bf-dfa5c84ad796" class="Note"><p class="Note"><span class="note_label">NOTE</span>&#xA0; These results are based on a study carried out on three different types of kernel.</p></div><p class="FigureTitle" align="center">Figure C.1&#xA0;&#x2014; Typical gelatinization curve</p></div>
+</div></aside>
+
+<h5>Key</h5>
+
+<p id="_99d0fc67-ceea-4cd2-8c21-a11fcb6d129a"><span class="stem">(#(w)#)</span> mass fraction of gelatinized kernels, expressed in per cent</p>
+
+
+    <p id="_334e46f1-4060-4e31-be63-d074cc123acd"> <span class="stem">(#(t)#)</span> cooking time, expressed in minutes</p>
+
+    <p id="_d34f29ae-83cf-410d-87b3-c1a4fa15fb35"><span class="stem">(#(t_90)#)</span> time required to gelatinize 90 % of the kernels</p>
+
+    <p id="_dfa84717-7ff2-4d08-bfb0-06e4b038176d"><span class="stem">P</span> point of the curve corresponding to a cooking time of <span class="stem">(#(t_90)#)</span></p>
+    
+    <p id="_b0f6e2d6-5662-44d0-9f16-6c42badadac1"><a id="d34e6a0c-6a92-4b17-94f1-6cd75a6fa197a" class="TableFootnoteRef">a&#xA0; </a> The time <span class="stem">(#(t_90)#)</span> was estimated to be 18,2 min for this example.</p>
+  
+  <div id="_c1751efd-b7b4-4c38-88bf-dfa5c84ad796" class="Note"><p class="Note"><span class="note_label">NOTE</span>&#xA0; These results are based on a study carried out on three different types of kernel.</p></div><p class="FigureTitle" align="center">Figure C.1&#xA0;&#x2014; Typical gelatinization curve</p></div>
         <div id="figureC-2" class="figure"><div id="_85901ad0-470a-4c92-bfa9-08c79ccdc399" class="figure">
 
   <img src="_images/02c28e44-8edd-4c7b-a340-21276bf6fbd6.png" width="800" height="703" />
@@ -979,7 +612,10 @@ standardization at the following addresses:</p>
       </div>
       <br />
       <div id="AnnexD" class="Section3">
-        <h1 class="Annex" id="8da37082-4658-4ddf-bad2-1f37a744070b"><b>Annex D</b><br />(informative)<br /><br /><b>Results of interlaboratory test for husked rice yields</b></h1>
+        <h1 class="Annex" id="8da37082-4658-4ddf-bad2-1f37a744070b">
+          
+          Annex D<span class="obligation"> (informative) </span>Results of interlaboratory test for husked rice yields
+        </h1>
         <p id="_e6857be1-05ad-4742-a136-0a78c9197953">An interlaboratory test <a href="#ref15">[15]</a> was carried out by the ENR [Rice Research Centre (Italy)] in accordance with <a href="#ISO5725-1">ISO 5725-1</a> and <a href="#ISO5725-2">ISO 5725-2</a>, with the participation of 15 laboratories. Each laboratory carried out three determinations on four different types of kernel. The statistical results are shown in <a href="#tableD-1">Table D.1</a>.</p>
         <p class="TableTitle" align="center">Table D.1&#xA0;&#x2014; Repeatability and reproducibility of husked rice yield</p>
         <table id="tableD-1" class="MsoISOTable" border="1" cellspacing="0" cellpadding="0">
@@ -1059,7 +695,9 @@ standardization at the following addresses:</p>
       </div>
       <br />
       <div id="_extraneous_information" class="Section3">
-        <h1 class="Annex" id="f2dcfade-18fb-461a-8e2b-53f524fe7012"><b>Annex E</b><br />(informative)<br /><br /><b>Extraneous information</b></h1>
+        <h1 class="Annex" id="f2dcfade-18fb-461a-8e2b-53f524fe7012">
+          
+          Annex E<span class="obligation"> (informative) </span>Extraneous information</h1>
         <p id="_c17819ce-12d3-4394-b089-25337668e2f6">
   <i>This appendix is not in the original Rice model document, and is inserted to illustrate elements absent fromthat document: block quotes, source code, and examples.</i>
 </p>
@@ -1098,18 +736,38 @@ standardization at the following addresses:</p>
         <p id="ref15" class="Biblio">[15]&#xA0; <span style="font-variant:small-caps;">Ranghino F.</span> Evaluation of rice resistance to cooking, based on the gelatinization time of kernels. <i>Il Riso</i>. 1966, <b>XV</b> pp 117-127</p>
         <p id="ref16" class="Biblio">[16]&#xA0; <span style="font-variant:small-caps;">Tkachuk R.</span> Nitrogen-to-protein conversion factors for cereals and oilseed meals. <i>Cereal Chem.</i> 1969, <b>46</b> (4) pp 419-423</p>
       </div>
-      <aside id="ftn1" class="footnote">
-  <p><a href="#_footnote1">1) </a>Under preparation. (Stage at the time of publication ISO/DIS 16634)</p>
-</aside>
-      <aside id="ftn2" class="footnote">
-  <p id="_d3878868-0215-4e11-82b5-a48596f877e0"><a href="#_footnote2">2) </a>Formerly denoted as 15 % (m/m).</p>
-</aside>
-      <aside id="ftn3" class="footnote">
-  <p id="_63f1f8a5-f071-4e61-8ea7-20fc43b83b60"><a href="#_footnote3">3) </a>Lugols is an example of a suitable product available commercially. This information is given for the convenience of users of this document and does not constitute an endorsement by ISO of this product.</p>
-</aside>
-      <div style="mso-element:comment-list"><div style="mso-element:comment" id="1"><span style="mso-comment-author:&quot;ISO&quot;"></span><p class="MsoCommentText" id="_c31c3949-0ec1-4125-b3eb-63c710d4fe9b"><span style="MsoCommentReference"><span lang="EN-GB" style="font-size:9.0pt" xml:lang="EN-GB"><span style="mso-special-character:comment"></span></span></span>A Foreword shall appear in each document. The generic text is shown here. It does not contain requirements, recommendations or permissions.</p>
-<p class="MsoCommentText" id="_e5b81090-b901-4b55-82c7-d54a5f150fef">For further information on the Foreword, see <b>ISO/IEC Directives, Part 2, 2016, Clause 12.</b></p></div></div>
+
+      <ol class="footnotes-list">
+          <li id="fn:1">
+            <p>
+              Under preparation. (Stage at the time of publication ISO/DIS 16634)</p>
+            
+            <a href="#fnref:1" rev="footnote">↩</a>
+          </li>
+          <li id="fn:2">
+              <p>
+                  Formerly denoted as 15 % (m/m).</p>
+              
+              <a href="#fnref:2" rev="footnote">↩</a>
+            </li>
+            <li id="fn:3">
+                <p>
+                    Lugols is an example of a suitable product available commercially. This information is given for the convenience of users of this document and does not constitute an endorsement by ISO of this product.</p>
+                
+                <a href="#fnref:3" rev="footnote">↩</a>
+              </li>
+      </ol>
+
+      
+      <div style="mso-element:comment-list"><div style="mso-element:comment" id="1"><span style="mso-comment-author:&quot;ISO&quot;"></span>
+        
+        <p class="MsoCommentText" id="_c31c3949-0ec1-4125-b3eb-63c710d4fe9b"><span style="MsoCommentReference"><span lang="EN-GB" style="font-size:9.0pt" xml:lang="EN-GB"><span style="mso-special-character:comment"></span></span></span>A Foreword shall appear in each document. The generic text is shown here. It does not contain requirements, recommendations or permissions.</p>
+
+        <p class="MsoCommentText" id="_e5b81090-b901-4b55-82c7-d54a5f150fef">For further information on the Foreword, see <b>ISO/IEC Directives, Part 2, 2016, Clause 12.</b></p>
+      </div></div>
     </div>
+
+  </main>
   <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     asciimath2jax: {
@@ -1118,5 +776,84 @@ standardization at the following addresses:</p>
  });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=AM_HTMLorMML"></script>
+
+<script>
+    //TOC generation
+      $('#toc').toc({
+          'selectors': 'h1,h2,h3', //elements to use as headings
+          'container': 'main', //element to find all selectors in
+          'smoothScrolling': true, //enable or disable smooth scrolling on click
+          'prefix': 'toc', //prefix for anchor tags and class names
+          'onHighlight': function(el) {}, //called when a new section is highlighted 
+          'highlightOnScroll': true, //add class to heading that is currently in focus
+          'highlightOffset': 100, //offset to trigger the next headline
+          'anchorName': function(i, heading, prefix) { //custom function for anchor name
+              return prefix+i;
+          },
+          'headerText': function(i, heading, $heading) { //custom function building the header-item text
+              return $heading.text();
+          },
+      'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+        return $heading[0].tagName.toLowerCase();
+      }
+      });
+      
+  </script>
+
+<script>
+  //TOC toggle animation
+$('#toggle').on('click', function(){
+    if( $('nav').is(':visible') ) {
+        $('nav').animate({ 'left': '-353px' }, 'slow', function(){
+            $('nav').hide();
+        });
+        $('body').animate({ 'margin-left': '0' }, 'slow');
+    }
+    else {
+        $('nav').show();
+        $('nav').animate({ 'left': '0px' }, 'slow');
+        $('body').animate({ 'margin-left': '298px' }, 'slow');
+    }
+});
+</script>
+
+<script>
+    // Scroll to top button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    asciimath2jax: {
+      delimiters: [['(#(', ')#)']]
+    }
+ });
+</script>
+
+<script>
+  $(document).ready(function() {
+	  $('[id^=toc]').each(function ()
+	  {
+	     var currentToc = $(this);
+       var url = window.location.href;
+	     currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "' </a>");
+	  });
+});
+</script>
+
 </body>
 </html>
