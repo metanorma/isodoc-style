@@ -31,6 +31,41 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,900" rel="stylesheet"> 
+    
+
+    <!-- jQuery must be included before Annotator -->
+    <!--script src="annotator/lib/vendor/jquery.js"></script-->
+
+    <!-- If you're sure your users will only be using browsers modern
+         enough to have their own JSON.parse and JSON.stringify
+         implementations you can skip this -->
+    <!--script src="annotator/lib/vendor/json2.js"></script-->
+
+    <!-- The main Annotator script -->
+    <script src="annotator/pkg/annotator.min.js"></script>
+
+    <!-- Annotator's styling and images -->
+    <link rel="stylesheet" type="text/css" href="annotator/pkg/annotator.min.css">
+
+    <!-- The following plugins are entirely optional -->
+
+    <!-- The Store plugin. Saves annotations to a remote backend -->
+    <script src="annotator/pkg/annotator.store.min.js"></script>
+
+    <!-- The Auth plugin. Allows users of Annotator to authenticate themselves
+         to the remote backend -->
+    <script src="annotator/pkg/annotator.auth.min.js"></script>
+
+    <!-- The Permissions plugin. See who created which annotation and create
+         annotations as a specified user -->
+    <script src="annotator/pkg/annotator.permissions.min.js"></script>
+
+    <!-- The Tags plugin. Edit and display tag keywords on annotations -->
+    <script src="annotator/pkg/annotator.tags.min.js"></script>
+
+    <!-- The Markdown plugin. Treat annotation text as Markdown -->
+    <script src="annotator/lib/vendor/showdown.js"></script>
+    <script src="annotator/pkg/annotator.markdown.min.js"></script>
 
   </head>
 
@@ -113,6 +148,8 @@
 </nav>
 
 <main>
+
+    <!--textarea id="output" style="float:right;height:50em;min-width:25em;" placeholder="Web Annotation Data Model document appears here upon selection"></textarea-->
       <div>
         <h1 class="ForewordTitle" id="07a10185-b0d8-4674-b0ed-6062419db5d3">Foreword</h1>
         <span style="MsoCommentReference" target="1" class="commentLink" from="foreword" to="foreword">
@@ -895,6 +932,36 @@ $('#toggle').on('click', function(){
 	  });
 });
 </script>
+
+<!--script src="annotation-builder.min.js"></script-->
+<!--script src="annotation-builder.min.js"></script>
+<script>
+document.addEventListener("selectionchange", function() {
+  var selection = window.getSelection();
+  console.log('Selection changed.', selection);
+
+  if (!('firstElementChild' in selection.focusNode && selection.focusNode.firstElementChild !=null
+        && selection.focusNode.firstElementChild.tagName === 'TEXTAREA')) {
+    var ab = new AnnotationBuilder().highlight(); //takes current user selection and builds an Annotation
+    var json = JSON.stringify(ab.result, false, '  '); // exports serialized version to JSON-LD
+    var output = document.getElementById('output');
+    output.value = json;
+  }
+});
+</script-->
+
+<script src="annotator/pkg/annotator.min.js"></script>
+    <script>
+      if (typeof annotator === 'undefined') {
+        alert("Oops! it looks like you haven't built Annotator. " +
+              "Either download a tagged release from GitHub, or build the " +
+              "package by running `make`");
+      } else {
+        var app = new annotator.App();
+        app.include(annotator.ui.main);
+        app.start();
+      }
+    </script>
 
 </body>
 </html>
