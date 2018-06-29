@@ -31,6 +31,41 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,900" rel="stylesheet"> 
+    
+
+    <!-- jQuery must be included before Annotator -->
+    <!--script src="annotator/lib/vendor/jquery.js"></script-->
+
+    <!-- If you're sure your users will only be using browsers modern
+         enough to have their own JSON.parse and JSON.stringify
+         implementations you can skip this -->
+    <!--script src="annotator/lib/vendor/json2.js"></script-->
+
+    <!-- The main Annotator script -->
+    <script src="annotator/pkg/annotator.min.js"></script>
+
+    <!-- Annotator's styling and images -->
+    <link rel="stylesheet" type="text/css" href="annotator/pkg/annotator.min.css">
+
+    <!-- The following plugins are entirely optional -->
+
+    <!-- The Store plugin. Saves annotations to a remote backend -->
+    <script src="annotator/pkg/annotator.store.min.js"></script>
+
+    <!-- The Auth plugin. Allows users of Annotator to authenticate themselves
+         to the remote backend -->
+    <script src="annotator/pkg/annotator.auth.min.js"></script>
+
+    <!-- The Permissions plugin. See who created which annotation and create
+         annotations as a specified user -->
+    <script src="annotator/pkg/annotator.permissions.min.js"></script>
+
+    <!-- The Tags plugin. Edit and display tag keywords on annotations -->
+    <script src="annotator/pkg/annotator.tags.min.js"></script>
+
+    <!-- The Markdown plugin. Treat annotation text as Markdown -->
+    <script src="annotator/lib/vendor/showdown.js"></script>
+    <script src="annotator/pkg/annotator.markdown.min.js"></script>
 
   </head>
 
@@ -113,6 +148,8 @@
 </nav>
 
 <main>
+
+    <!--textarea id="output" style="float:right;height:50em;min-width:25em;" placeholder="Web Annotation Data Model document appears here upon selection"></textarea-->
       <div>
         <h1 class="ForewordTitle" id="07a10185-b0d8-4674-b0ed-6062419db5d3">Foreword</h1>
         <span style="MsoCommentReference" target="1" class="commentLink" from="foreword" to="foreword">
@@ -324,15 +361,42 @@ standardization at the following addresses:</p>
 <div id="_dc7c5567-beac-4b0a-86fd-c64a7d28dcf3" class="Note"><p class="Note"><span class="note_label">NOTE</span>&#xA0; Lower mass fractions of moisture are sometimes needed for certain destinations depending on the climate, duration of transport and storage. For further details, see <a href="#ISO6322-1">ISO 6322-1</a>, <a href="#ISO6322-2">ISO 6322-2</a> and <a href="#ISO6322-3">ISO 6322-3</a>.</p></div></div>
 <div id="_2"><p id="_15bf80ea-d37d-49fe-b901-0868e058b0be">The defect tolerance for the categories considered, and determined in accordance with the method given in <a href="#AnnexA">Annex A</a>, shall not exceed the limits given in <a href="#table1">Table 1</a>.</p>
 <p class="TableTitle" align="center">Table 1&#xA0;&#x2014; Maximum permissible mass fraction of defects</p><table id="table1" class="MsoISOTable" border="1" cellspacing="0" cellpadding="0"><thead><tr><th rowspan="2" align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Defect</th><th colspan="4" align="center" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Maximum permissible mass fraction of defects in husked rice<br />
-<span class="stem">(#(w_max)#)</span></th></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.5pt;">in husked rice</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.5pt;">in milled rice (non-glutinous)</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.5pt;">in husked parboiled rice</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.5pt;">in milled parboiled rice</td></tr></thead><tbody><tr><td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Extraneous matter: organic<a href="#table1a" class="TableFootnoteRef">a</a></td><td align="center" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">0,5</td><td align="center" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">0,5</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Extraneous matter: inorganic<a href="#table1b" class="TableFootnoteRef">b</a></td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">0,5</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">0,5</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">0,5</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">0,5</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Paddy</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">2,5</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">0,3</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">2,5</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">0,3</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Husked rice, non-parboiled</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Not applicable</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Milled rice, non-parboiled</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Not applicable</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Husked rice, parboiled</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Not applicable</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Milled rice, parboiled</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Not applicable</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Chips</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">0,1</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">0,1</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">0,1</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">0,1</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">HDK</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">2,0<a href="#table1c" class="TableFootnoteRef">c</a></td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">2,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">2,0<a href="#table1c" class="TableFootnoteRef">c</a></td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">2,0</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Damaged kernels</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">4,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">3,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">4,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">3,0</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Immature and/or malformed kernels</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">8,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">2,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">8,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">2,0</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Chalky kernels</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">5,0<a href="#table1c" class="TableFootnoteRef">c</a></td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">5,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Not applicable</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Not applicable</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Red kernels and red-streaked kernels</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">12,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">12,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">12,0<a href="#table1c" class="TableFootnoteRef">c</a></td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">12,0</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Partly gelatinized kernels</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Not applicable</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Not applicable</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">11,0<a href="#table1c" class="TableFootnoteRef">c</a></td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">11,0</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Pecks</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Not applicable</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Not applicable</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">4,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">2,0</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.5pt;">Waxy rice</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.5pt;">1,0<a href="#table1c" class="TableFootnoteRef">c</a></td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.5pt;">1,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.5pt;">1,0<a href="#table1c" class="TableFootnoteRef">c</a></td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.5pt;">1,0</td></tr></tbody><tfoot><tr><td colspan="5" align="left" style="border-top:solid windowtext 1.5pt;border-bottom:0pt;">
+<span class="stem">(#(w_max)#)</span></th></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.5pt;">in husked rice</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.5pt;">in milled rice (non-glutinous)</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.5pt;">in husked parboiled rice</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.5pt;">in milled parboiled rice</td></tr></thead><tbody><tr><td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Extraneous matter: organic<sup id="fnref:t1a">
+    <a href="#fn:t1a" rel="footnote">a</a>
+  </sup></td><td align="center" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">0,5</td><td align="center" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">0,5</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Extraneous matter: inorganic<sup id="fnref:t1b">
+      <a href="#fn:t1b" rel="footnote">b</a>
+    </sup></td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">0,5</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">0,5</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">0,5</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">0,5</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Paddy</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">2,5</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">0,3</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">2,5</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">0,3</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Husked rice, non-parboiled</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Not applicable</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Milled rice, non-parboiled</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Not applicable</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Husked rice, parboiled</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Not applicable</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Milled rice, parboiled</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">1,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Not applicable</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Chips</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">0,1</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">0,1</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">0,1</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">0,1</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">HDK</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">2,0<sup id="fnref:t1c">
+        <a href="#fn:t1c" rel="footnote">a</a>
+      </sup></td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">2,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">2,0<sup id="fnref:t1c">         <a href="#fn:t1c" rel="footnote">c</a>       </sup></td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">2,0</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Damaged kernels</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">4,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">3,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">4,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">3,0</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Immature and/or malformed kernels</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">8,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">2,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">8,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">2,0</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Chalky kernels</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">5,0<sup id="fnref:t1c">         <a href="#fn:t1c" rel="footnote">c</a>       </sup></td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">5,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Not applicable</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Not applicable</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Red kernels and red-streaked kernels</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">12,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">12,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">12,0<sup id="fnref:t1c">         <a href="#fn:t1c" rel="footnote">c</a>       </sup></td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">12,0</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Partly gelatinized kernels</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Not applicable</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Not applicable</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">11,0<sup id="fnref:t1c">         <a href="#fn:t1c" rel="footnote">c</a>       </sup></td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">11,0</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Pecks</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Not applicable</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">Not applicable</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">4,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.0pt;">2,0</td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.5pt;">Waxy rice</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.5pt;">1,0<sup id="fnref:t1c">         <a href="#fn:t1c" rel="footnote">c</a>       </sup></td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.5pt;">1,0</td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.5pt;">1,0<sup id="fnref:t1c">         <a href="#fn:t1c" rel="footnote">c</a>       </sup></td><td align="center" style="border-top:none;border-bottom:solid windowtext 1.5pt;">1,0</td></tr></tbody><tfoot><tr><td colspan="5" align="left" style="border-top:solid windowtext 1.5pt;border-bottom:0pt;">
         <p id="_c89ba3e9-4449-49cf-b09d-d529ee11f85d">Live insects shall not be present. Dead insects shall be included in extraneous matter.</p>
-      </td></tr><tr><td colspan="5" style="border-top:0pt;border-bottom:solid windowtext 1.5pt;"><div id="_fc4ca3b8-d01a-4ed8-8294-50d9c6142129" class="Note"><p class="Note"><span class="note_label">NOTE  1</span>&#xA0; This table is based on <a href="#ISO7301">ISO 7301: 2011</a>.</p></div><div id="_5d3c3a73-bee5-40cd-a428-42131614b6af" class="Note"><p class="Note"><span class="note_label">NOTE  2</span>&#xA0; Some commercial contracts require information in addition to that provided in this table.</p></div><div id="_189aee93-9945-4466-81a9-9b6f972545b6" class="Note"><p class="Note"><span class="note_label">NOTE  3</span>&#xA0; Only full red husked (cargo) rice is considered in this table.</p></div><div class="TableFootnote"><div id="ftntable1a">
-  <p id="_1fce88a0-3e47-47e3-9709-717c5b7b7e2f" class="TableFootnote"><a id="table1a" class="TableFootnoteRef">a&#xA0; </a>Organic extraneous matter includes foreign seeds, husks, bran, parts of straw, etc.</p>
-</div></div><div class="TableFootnote"><div id="ftntable1b">
-  <p id="_5bfb52f8-c405-4015-9424-97fab6620bd8" class="TableFootnote"><a id="table1b" class="TableFootnoteRef">b&#xA0; </a>Inorganic extraneous matter includes stones, sand, dust, etc.</p>
-</div></div><div class="TableFootnote"><div id="ftntable1c">
-  <p id="_3365eba1-e64f-4cd7-b172-f2633218856d" class="TableFootnote"><a id="table1c" class="TableFootnoteRef">c&#xA0; </a>The maximum permissible mass fraction of defects shall be determined with respect to the mass fraction obtained after milling.</p>
-</div></div></td></tr></tfoot></table>
+      </td></tr><tr><td colspan="5" style="border-top:0pt;border-bottom:solid windowtext 1.5pt;"><div id="_fc4ca3b8-d01a-4ed8-8294-50d9c6142129" class="Note"><p class="Note"><span class="note_label">NOTE  1</span>&#xA0; This table is based on <a href="#ISO7301">ISO 7301: 2011</a>.</p></div><div id="_5d3c3a73-bee5-40cd-a428-42131614b6af" class="Note"><p class="Note"><span class="note_label">NOTE  2</span>&#xA0; Some commercial contracts require information in addition to that provided in this table.</p></div><div id="_189aee93-9945-4466-81a9-9b6f972545b6" class="Note"><p class="Note"><span class="note_label">NOTE  3</span>&#xA0; Only full red husked (cargo) rice is considered in this table.</p></div>
+        
+        <div class="TableFootnote">
+
+          <!-- HERE!! -->
+
+          <ol>
+            <li class="TableFootnote"id="fn:t1a">
+              <p>
+                  Organic extraneous matter includes foreign seeds, husks, bran, parts of straw, etc.
+              </p>
+              <a href="#fnref:t1a" rev="footnote">↩</a>
+            </li>
+            <li class="TableFootnote"id="fn:t1b">
+                <p>
+                    Inorganic extraneous matter includes stones, sand, dust, etc.
+                </p>
+                <a href="#fnref:t1b" rev="footnote">↩</a>
+              </li>
+              <li class="TableFootnote"id="fn:t1c">
+                  <p>
+                      The maximum permissible mass fraction of defects shall be determined with respect to the mass fraction obtained after milling.
+                  </p>
+                  <a href="#fnref:t1c" rev="footnote">↩</a>
+                </li>
+          </ol>
+        
+        </div></td></tr></tfoot></table>
 
 
 </div></div>
@@ -626,7 +690,13 @@ standardization at the following addresses:</p>
             </tr>
             <tr>
               <td align="left" style="border-top:none;border-bottom:solid windowtext 1.5pt;">Arborio</td>
-              <td align="center" style="border-top:none;border-bottom:solid windowtext 1.5pt;">Drago<a href="#tableD-1a" class="TableFootnoteRef">a</a></td>
+              <td align="center" style="border-top:none;border-bottom:solid windowtext 1.5pt;">Drago
+                
+                
+              <sup id="fnref:t2a">
+                <a href="#fn:t2a" rel="footnote">a</a>
+              </sup>
+            </td>
               <td align="center" style="border-top:none;border-bottom:solid windowtext 1.5pt;">Balilla</td>
               <td align="center" style="border-top:none;border-bottom:solid windowtext 1.5pt;">Thaibonnet</td>
             </tr>
@@ -690,7 +760,15 @@ standardization at the following addresses:</p>
             </tr>
           </tbody>
         <tfoot><tr><td colspan="5" style="border-top:0pt;border-bottom:solid windowtext 1.5pt;"><div class="TableFootnote"><div id="ftntableD-1a">
-  <p id="_4e94d186-a6ae-4605-8243-f0c5fa8574e4" class="TableFootnote"><a id="tableD-1a" class="TableFootnoteRef">a&#xA0; </a>Parboiled rice.</p>
+  
+        <ol>
+          <li class="TableFootnote"id="fn:t2a">
+            <p>
+              Parboiled rice.
+            </p>
+            <a href="#fnref:t2a" rev="footnote">↩</a>
+        </li>
+      </ol>
 </div></div></td></tr></tfoot></table>
       </div>
       <br />
@@ -854,6 +932,36 @@ $('#toggle').on('click', function(){
 	  });
 });
 </script>
+
+<!--script src="annotation-builder.min.js"></script-->
+<!--script src="annotation-builder.min.js"></script>
+<script>
+document.addEventListener("selectionchange", function() {
+  var selection = window.getSelection();
+  console.log('Selection changed.', selection);
+
+  if (!('firstElementChild' in selection.focusNode && selection.focusNode.firstElementChild !=null
+        && selection.focusNode.firstElementChild.tagName === 'TEXTAREA')) {
+    var ab = new AnnotationBuilder().highlight(); //takes current user selection and builds an Annotation
+    var json = JSON.stringify(ab.result, false, '  '); // exports serialized version to JSON-LD
+    var output = document.getElementById('output');
+    output.value = json;
+  }
+});
+</script-->
+
+<script src="annotator/pkg/annotator.min.js"></script>
+    <script>
+      if (typeof annotator === 'undefined') {
+        alert("Oops! it looks like you haven't built Annotator. " +
+              "Either download a tagged release from GitHub, or build the " +
+              "package by running `make`");
+      } else {
+        var app = new annotator.App();
+        app.include(annotator.ui.main);
+        app.start();
+      }
+    </script>
 
 </body>
 </html>
